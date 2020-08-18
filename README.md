@@ -1,15 +1,15 @@
 # CURSO-TALLER: INTROODUCCIÓN A R
 
 ![alt text](https://github.com/ulises1229/INTRO-R-ENESJ/blob/master/figs/header.png)
-![alt text](https://github.com/ulises1229/INTRO-R-ENESJ/blob/master/figs/r.png)
+![alt text](https://github.com/ulises1229/INTRO-R-ENESJ/blob/master/figs/python.png)
 
 ## Fecha
 ### 17 - 21 de Agosto de 2020 
 
 ## Impartido por:
 <ul>
-  <li> Dr. Alberto Prado Farías</li>
   <li> Dr. Ulises Olivares Pinto</li>
+  <li> Walter André Rosales</li>
 </ul>
 
 ## Temario, materiales y videos
