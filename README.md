@@ -1,10 +1,10 @@
-# CURSO-TALLER: INTROODUCCIÓN Al ANÁLISIS Y VISUALIZACIÓN DE DATOS EN PYTHON
+# CURSO-TALLER: Introducción al análisis y visualización de datos en Python
 
 ![alt text](https://github.com/ulises1229/INTRO-R-ENESJ/blob/master/figs/header.png)
 ![alt text](figs/python.png)
 
 ## Fecha
-### 17 - 21 de Agosto de 2020 
+### 31 de agosto - 04 de septiembre de 2020 
 
 ## Impartido por:
 <ul>
