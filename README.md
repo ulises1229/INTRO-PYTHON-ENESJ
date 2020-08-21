@@ -26,5 +26,5 @@
 | Día 4      | Matemáticas simbólicas y visualización de datos| <ul>  <li> Manipulaciones algebraicas</li> <li> Cálculo (Expansión de series, diferenciación, integración) </li> <li> Resolución de ecuaciones algebraicas</li> <li> Cómo elegir un gráfico adecuado? </li> <li> Matplotlib (o	Gráficos simples y personalización de gráficos)</li></ul>| <ul><li></li> <li></li></ul>  | |
 | Día 5      | Python e inteligencia artificial | <ul> <li> Introducción y definiciones</li> <li> Redes neuronales</li> <li> Deep Learning con PyTorch</li></ul> |  <ul><li></li> <li></li></ul>   | |
 
-##### Última modificación
+##### Última modificación 21 de agosto de 2020
 
