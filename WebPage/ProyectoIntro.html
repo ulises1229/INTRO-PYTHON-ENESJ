@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Curso Introducción a Python</title>
+    <link href="static/icono.ico" rel="icon">
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="script" href="static/script.js">
+    <!-- Boostrap code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Sidebar nice display -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Python code highlight -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+    </head>
+    <body>
+        <aside class="sidebar">
+          <h2><a class="title" href="index.html">Introducción al Análisis y Visualización de Datos en Python</a></h2>
+          <hr>
+
+          <a href="index.html">Introducción al curso</a>
+            <button class="dropdown-btn selected"> Introducción a Python
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="IntroPython.html">Ejercicios en clase</a>
+                <a class="selected" href="#">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Almacenamiento de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="AlmacenamientoDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoAlmacenamientoDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Manipulación de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="ManipulacionDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoManipulacionDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Matemáticas Simbólicas y Visualización de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="VisualizacionDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoVisualizacionDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Inteligencia Artificial
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="InteligenciaArtificial.html">Ejercicios en clase</a>
+                <a href="ProyectoInteligenciaArtificial.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <a href="Additional.html">Recursos adicionales</a>
+            <a href="About.html">Sobre este curso</a>
+
+          <hr>
+          <h3>Impartido por:</h3>
+          <ul>
+            <li>Dr. Ulises Olivares</li>
+            <li>Walter Rosales</li>
+          </ul>
+          <hr>
+          <img src="static/logo.png" class="menu-image" alt="ENES logo">
+          <img src="static/UNAM.png" class="menu-image" alt="UNAM logo">
+        </aside>
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              console.log(dropdownContent.innerHTML);
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+              });
+            }
+        </script>
+
+        <main>
+          <h1 class="title">Proyecto Unidad 1: Diagnóstico Preventivo</h1>
+
+          <hr>
+          Al final del proyecto, tu programa debe de tener un comportamiento como el siguiente:
+          <div class="w3-panel w3-card w3-light-grey">
+              <p> <br>
+                $ python DiagnosticoPreventivo.py <br> <br>
+                ¿Cuántos pacientes hay hoy?: 2 <br> <br>
+
+                Paciente 1 <br>
+                Nombre: Luan <br>
+                Luan, responde con un 1 si presentas el síntoma, de lo contrario responde con un 0. <br>
+                Presentas <br>
+                Tos: 1 <br>
+                Fiebre: 0 <br>
+                Dolor de cabeza: 0 <br>
+                Dolor o ardor de garganta: 1 <br>
+                Ojos rojos: 0 <br>
+                Malestar general: 1 <br>
+                Dificultad para respirar: 0 <br> <br>
+                Luan, es posible que tengas COVID-19. Por favor ponte en contacto con el sector salud para notificar sobre tu caso. <br> <br>
+
+                Paciente 2 <br>
+                Nombre: Roen <br>
+                Roen, responde con un 1 si presentas el síntoma, de lo contrario responde con un 0. <br>
+                Presentas <br>
+                Tos: 1 <br>
+                Fiebre: 0 <br>
+                Dolor de cabeza: 1 <br>
+                Dolor o ardor de garganta: 0 <br>
+                Ojos rojos: 0 <br>
+                Malestar general: 0 <br>
+                Dificultad para respirar: 0 <br> <br>
+                Roen, es probable que no tengas COVID-19, tus síntomas podrían corresponder a otro padecimiento. Sin embargo, sigue al pendiente de tu estado
+                de salud, y si presentas compliaciones ponte en contacto con el sector salud. <br> <br>
+
+              </p>
+          </div>
+
+          <hr><br>
+          <h2>Código Inicial</h2>
+          <p>Descarga los archivos necesarios para comenzar este proyecto.</p>
+          <a href="static/Proyecto1.zip" class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; " download>Descargar archivos</a>
+
+          <hr>
+          <h2>Inspiración</h2>
+          <p>
+              Actualmente el mundo vive una situación crítica con la emergencia sanitaria debido al virus SARS-CoV 2 identificado a finales de 2019 en la ciudad de Wuhan, China.
+              Este virus es responsable de la enfermedad denominada COVID-19, actual pandemia mundial. Una persona contagiada presenta síntomas y signos similares a los provocados
+              por una gripe u otros padecimientos similares, por lo que su detección temprana en ocasiones puede llegar a ser complicada.
+          </p>
+          <p>
+              La Secretaría de Salud en conjunto con el Gobierno de México han puesto a disposición de los ciudadanos mexicanos un portal con información relacionada sobre el nuevo
+              coronavirus y la enfermedad que provoca, así como información útil para su prevención y atención en nuestro país en <a target="_blank" class="text-info" href="https://coronavirus.gob.mx/">este sitio</a>.
+          </p>
+          <p>
+              Muchos de los esfuerzos están enfocados a la prevención del contagio, una de las estrategias para esto son las campañas de detección temprana. En estas se pide que
+              la gente que presente posibles síntomas de COVID-19 asista para hacerle una serie de preguntas y confirmar si es posible portador del virus o no antes de aplicarle la
+              prueba conocida como <a target="_blank" class="text-info" href="https://es.wikipedia.org/wiki/Reacci%C3%B3n_en_cadena_de_la_polimerasa">PCR</a>, la cual detecta si una persona es
+              portadora o no a través de un análisis genético.
+          </p>
+          <p>
+              En estas campañas las personas asisten a un módulo donde personal de salud les hace preguntas referente a la sintomatología
+              que presentan. Dependiendo de los síntomas y signos del paciente se le da un diagnóstico inicial en donde se le informa si es posible portador del COVID-19 o no, así como
+              algunas recomendaciones según su estado de salud.
+          </p>
+          <p>
+              En la página del gobierno para la prevención del COVID-19 se menciona que si un paciente presenta uno o varios de los siguientes síntomas o signos:
+          </p>
+          <ul>
+              <li>Tos</li>
+              <li>Fiebre</li>
+              <li>Dolor de cabeza</li>
+          </ul>
+          y se acompaña de al menos uno de estos otros:
+          <ul>
+              <li>Dolor o ardor de garganta</li>
+              <li>Ojos rojos</li>
+              <li>Dolores en músculos o articulaciones (malestar general)</li>
+          </ul>
+          <p>
+              es muy probable que sea portador del virus, por lo que es necesario realizar la prueba. Si el pacient no presenta este conjunto de síntomas, es posible que padezca alguna otra
+              enfermedad. Sin embargo recomiendan mantener las precauciones y no reducir los cuidados.
+          </p>
+          <p>
+              Los casos graves de COVID-19 presentan además de los ya mencionados síntomas, dificultad para respirar; en estos casos es necesario actuar de forma
+              inmediata ya que la salud del paciente podría estar en riesgo.
+          </p>
+
+          <hr>
+          <h2>Proyecto</h2>
+          <p>
+              Tu trabajo será realizar un código que lleve a cabo el mismo procedimiento, pero sin necesidad de que el personal médico esté en
+              contacto con personas que puedan estar infectadas.
+          </p>
+          <p>
+              Tu programa tomará el número de pacientes que se va a atender en un día, y para cada uno de ellos le preguntará si presenta alguno
+              de los síntomas o signos provocados por el COVID-19. Cuando el paciente haya terminado de ingresar su información, el programa deberá
+              desplegarle en pantalla en qué caso se encuentra de los siguientes:
+          </p>
+          <ul>
+              <li>No presenta síntomas de COVID-19</li>
+              <li>Presenta síntomas de COVID-19 leve</li>
+              <li>Presenta síntomas de COVID-10 grave</li>
+          </ul>
+          <p>
+              Si lo crees conveniente, después de darle su diagnóstico puedes agregar alguna recomendación sobre qué hacer según su resultado.
+          </p>
+
+          <hr>
+          <h2>Ayudas</h2>
+          <p>
+              En la carpeta comprimida (.zip) que descargaste al principio de esta página encontrarás los códigos para comenzar con el proyecto. Esta carpeta
+              tiene dos scripts que te ayudarán a realizarlo.
+          </p>
+          <h4><code class="mc">Ayudas.py</code></h4>
+          <p>
+              Contiene la función <code class="mc">ObtenerNumeroPacientes(pregunta)</code> que te permite obtener una entrada por parte del usuario a través de la terminal.
+              El valor regresado será el número entero ingresado por el usuario. Puedes utilizar el parámetro opcional <code class="mc">pregunta</code> si deseas especificar
+              la pregunta que le vas a hacer al usuario para ingresar el número de pacientes que el código va a atender.
+          </p>
+          <p>
+              También cuenta con la función <code class="mc">PacienteTiene(sintoma)</code> que pregunta al usuario si padece el síntoma especificado en el parámetro
+              <code class="mc">sintoma</code>, esperando que el usuario escriba un 1 si lo presenta, o un 0 en caso contrario. Si el usuario lo presenta la función regresará
+              un valor <code class="mc">True</code> de no presentarlo regresará un valor <code class="mc">False</code>.
+          </p>
+          <h4><code class="mc">DiagnosticoPreventivo.py</code></h4>
+          <p>
+              Este será tu código principal. En él se importan las funciones <code class="mc">ObtenerNumeroPacientes</code> y <code class="mc">PacienteTiene</code> antes descritas,
+              del código <code class="mc">Ayudas.py</code>.
+          </p>
+          <p>
+              Además de eso, trae la definicón de la función <code class="mc">Diagnóstico</code> que ocuparás para darle el diagnóstico al paciente. Observa que esta función recibe
+              como parámetros los síntomas del paciente <code class="mc">tos</code>, <code class="mc">fiebre</code>, <code class="mc">dolor_cabeza</code>, <code class="mc">dolor_garganta</code>,
+              <code class="mc">ojos_rojos</code>, <code class="mc">malestar_general</code> y <code class="mc">dificultad_respirar</code> todos correpsondientes a los síntomas descritos en la sección anterior,
+              los cuales son utilizados para evaluar si una persona puede estar contagiada de COVID-19.
+          </p>
+          <p>
+              Por último, hemos definido para tí la variable <code class="mc">no_pacientes</code> y la hemos asignado al valor devuelto por la función <code class="mc">ObtenerNumeroPacientes</code>
+              por lo que <code class="mc">no_pacientes</code> corresponderá al número total de pacientes que tendrá que diagnosticar tu programa durante su ejecución.
+          </p>
+
+          <hr>
+          <h2>Especificación</h2>
+          <p>
+              Para lograr el proyecto deberás de completar el código en <code class="mc">DiagnosticoPreventivo.py</code> de forma que pueda diagnosticar el COVID-19 en los pacientes.
+          </p>
+          <p>
+              Deberás:
+          </p>
+          <ul>
+              <li>Completar la función <code class="mc">Diagnostico</code> de forma que haga un diagnóstico para el paciente considerando la combinación de
+              síntomas que presente.</li>
+              <li>Completar la segunda sección del código para que se le pregunte su información y síntomas además de darle su diagnóstico a cada uno de los pacientes especificados por la variable
+              <code class="mc">no_pacientes</code> de forma programática.</li>
+          </ul>
+
+          <hr>
+          <h2>Walkthrough</h2><br>
+          <div class="container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/G6PHyNu0zqY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <hr>
+          <h2>Resultados esperados</h2>
+          <p>
+              Tu programa deberá de preguntarle a cada paciente sus síntomas y darle un diagnóstico según las recomendaciones de la Secretaría de Salud y el Gobierno de México descritas
+              <a target="_blank" class="text-info" href="https://coronavirus.gob.mx/informacion-accesible/">aquí</a> en una forma similar a la mostrada a continuación:
+          </p>
+          <div class="w3-panel w3-card w3-light-grey">
+              <p> <br>
+                $ python DiagnosticoPreventivo.py <br> <br>
+                ¿Cuántos pacientes hay hoy?: 1 <br> <br>
+
+                Paciente 1 <br>
+                Nombre: Rodok <br>
+                Rodok, responde con un 1 si presentas el síntoma, de lo contrario responde con un 0. <br>
+                Presentas <br>
+                Tos: 1 <br>
+                Fiebre: 1 <br>
+                Dolor de cabeza: 0 <br>
+                Dolor o ardor de garganta: 1 <br>
+                Ojos rojos: 0 <br>
+                Malestar general: 1 <br>
+                Dificultad para respirar: 1 <br> <br>
+                Luan, padeces de COVID-19 en un estado grave. Es necesario que te dirigas a una institución de salud de forma inmediata. <br>
+              </p>
+          </div>
+          <p>
+              Una vez que tu programa sea capaz de dar un diagnóstico correcto para los pacientes, habrás culminado con éxito tu primer proyecto.
+          </p>
+          <br> <br>
+        </main>
+        <footer> <br>
+          <div class="text-center">
+          <p>
+            Curso impartido por la <a target="_blank" class="text-dark" href="http://www.enesjuriquilla.unam.mx/">ENES Juriquilla</a>.
+          </p>
+        </div>
+        </footer>
+
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+        <script>w3CodeColor();</script>
+    </body>
+</html>

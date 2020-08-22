@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar a:hover, .dropdown-btn:hover {
+  background-color: #B5EAF6;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar h1, h2, h3, p {
+  padding-left: 10px;
+}
+
+.sidebar a, .dropdown-btn {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 8px 6px 16px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidebar a.selected, button.selected {
+  background-color: #4590B8;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #B5EAF6;
+}
+
+.sidebar h2 .title {
+  color: black;
+  font-size: 1.2em;
+}
+
+.sidebar h2 .title:hover {
+  background-color: #4590B8;
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #1A3260;
+  color: white;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #FFF;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+main, footer {
+  margin-left: 22%;
+  padding: 1px;
+  width: 75%;
+}
+
+main h1 {
+  padding: 60px;
+  font-size: 3em;
+}
+
+main {
+  padding-bottom: 25%;
+}
+
+.container {
+  position: relative;
+  width: 30%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.menu-image {
+    width:60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.mc {
+  font-family: Consolas,"courier new";
+  color: #4590B8;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
+div .code {
+  background-color: #F1F1F1;
+  text-align: left;
+}
+
+.sidebar hr {
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+
+main hr {
+  border: 1.3px solid gray;
+  border-radius: 2px;
+}
+
+footer {
+  color: white;
+  background-color: #4590B8;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+.custom-list > li {
+    position: relative;
+    padding: 5px 20px;
+}
+.custom-list > li:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url('/static/Icon.png');
+    /*background-image: url('/PythonCourse/static/Icon.png'); */
+    background-size: cover;
+    background-position: center;
+    left: 0;
+}
+
+.blue {
+  color: #4590B8;
+}

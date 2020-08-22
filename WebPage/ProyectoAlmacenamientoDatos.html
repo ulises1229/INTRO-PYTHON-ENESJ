@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Curso Introducción a Python</title>
+    <link href="static/icono.ico" rel="icon">
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="script" href="static/script.js">
+    <!-- Boostrap code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Sidebar nice display -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Python code highlight -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+    </head>
+    <body>
+        <aside class="sidebar">
+          <h2><a class="title" href="index.html">Introducción al Análisis y Visualización de Datos en Python</a></h2>
+          <hr>
+
+          <a href="index.html">Introducción al curso</a>
+            <button class="dropdown-btn"> Introducción a Python
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="IntroPython.html">Ejercicios en clase</a>
+                <a href="ProyectoIntro.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn selected"> Almacenamiento de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="AlmacenamientoDatos.html">Ejercicios en clase</a>
+                <a class="selected" href="#">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Manipulación de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="ManipulacionDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoManipulacionDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Matemáticas Simbólicas y Visualización de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="VisualizacionDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoVisualizacionDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Inteligencia Artificial
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="InteligenciaArtificial.html">Ejercicios en clase</a>
+                <a href="ProyectoInteligenciaArtificial.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <a href="Additional.html">Recursos adicionales</a>
+            <a href="About.html">Sobre este curso</a>
+
+          <hr>
+          <h3>Impartido por:</h3>
+          <ul>
+            <li>Dr. Ulises Olivares</li>
+            <li>Walter Rosales</li>
+          </ul>
+          <hr>
+          <img src="static/logo.png" class="menu-image" alt="ENES logo">
+          <img src="static/UNAM.png" class="menu-image" alt="UNAM logo">
+        </aside>
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              console.log(dropdownContent.innerHTML);
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+              });
+            }
+        </script>
+
+        <main>
+          <h1 class="title">Proyecto Unidad 2: Simulación epidemiológica</h1>
+
+          <hr>
+          Al final del proyecto, tu programa debe de tener un comportamiento como el siguiente:
+          <div class="w3-panel w3-card w3-light-grey">
+              <p> <br>
+                  $ python SimulacionEpidemiologica.py <br> <br>
+                  ¿Cuántas personas hay en la simulación?: 9 <br>
+                  ¿Cuántos contagiados iniciales hay?: 3 <br>
+                  ¿Cuál es el valor de beta?: 0.4 <br>
+                  ¿Cuál es el valor de gamma?: 0.15 <br> <br>
+              </p>
+              <pre>
+  Día 0
+  array([[1, 0, 0],
+         [0, 0, 1],
+         [0, 0, 1]])
+
+  Día 1
+  array([[2, 0, 0],
+         [1, 1, 2],
+         [0, 0, 1]])
+
+  Día 2
+  array([[2, 1, 0],
+         [2, 1, 2],
+         [1, 0, 2]])
+
+  Día 3
+  array([[2, 2, 0],
+         [2, 2, 2],
+         [1, 1, 2]])
+
+  Día 4
+  array([[2, 2, 0],
+         [2, 2, 2],
+         [2, 2, 2]])
+
+  Final de la simulación en día 4.
+  1 Suceptibles.
+  8 Removidos.
+              </pre>
+          </div>
+
+          <hr><br>
+          <h2>Código Inicial</h2>
+          <p>Descarga los archivos necesarios para comenzar este proyecto.</p>
+          <a href="static/Proyecto2.zip" class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; " download>Descargar archivos</a>
+
+          <hr>
+          <h2>Inspiración</h2>
+          <p>
+              Los procesos epidemiológicos siguen un patrón de comportamiento, en el cual las personas pueden entrar en uno de varios posibles estados. El modelo que describe este comportamiento
+              en su forma más básica se conoce como <a class="text-info" href="https://es.wikipedia.org/wiki/Modelo_SIR">modelo SIR</a>.
+          </p>
+          <p>
+              Este modelo matemático considera tres posibles estados en los que pueden encontrarse los individuos ante un proceso infeccioso. Estos tres estados corresponden con:
+          </p>
+          <ul>
+              <li><strong>S (susceptible)</strong>: En este estado se encuentran los individuos que no han sido contagiados con el patógeno y por tanto están susceptibles a contagiarse.</li>
+              <li><strong>I (infectado)</strong>: Este es el estado en el que se encuentran aquellos que están infectados por el patógeno, y que además presentan la capacidad de contagiar
+              a los individuos en estado susceptible. Los individuos en este estado son los principales agentes infecciosos en la mayoría de las ocasiones, ya que son ellos los que transmiten la
+              enfermedad entre los individuos de la población.</li>
+              <li><strong>R (removido o recuperado)</strong>: Aquí se encuentran los individuos que ya padecieron la enfermedad, y que por un cierto conjunto de circunstancias (e.g. muerte, recuperación,
+              inmunidad, vacuna, etc.) ya no tienen la capacidad de infectarse, y por tanto dejan de contribuir al proceso infeccioso.</li>
+          </ul>
+          <p>
+              Estos tres estado base son los que regulan el proceso infeccioso en una población de individuos cuando se presenta un patógeno. Tómese en cuenta que esta es una clara simplificación del fenómeno
+              epidemiológico, ya que es el modelo básico.
+          </p>
+          <p>
+              El modelo se puede visualizar gráficamente de la forma siguiente:
+          </p>
+          <img class="center" src="/static/resources/SIRGraph.png" style="width: 30%;" alt="SIR Graph">
+          <p>
+              Dicha visualización se puede interpretar como un <a class="text-info" href="https://es.wikipedia.org/wiki/Grafo">grafo</a> dirigido,
+              o como una secuencia de pasos. Nótese que en esta figura están presentes los tres estados antes mencionados <em>S, I</em> y <em>R</em>, cada uno como un nodo.
+              Las aristas que los conectan tienen dirección, de forma que de un estado únicamente se puede pasar al siguiente y no de forma inversa (e.g.
+              de infectado únicamente se puede pasar a removido, no de forma inversa). Igualmente se puede notar que se agregan dos parámetros antes no mencionados
+              <em class="blue">&beta;</em> (beta) y <em class="blue">&gamma;</em> (gamma), los cuales indican el peso de la arista, o interpretados de otra forma indican a qué tasa o probabilidad se pasa
+              de un estado a otro. Estos dos valores, al ser probabilidades están acotados al rango [0, 1].
+          </p>
+          <p>
+              Del grafo podemos interpretar entonces que:
+          </p>
+          <ul>
+              <li><em class="blue">&beta;</em> es la probabilidado o tasa de que un susceptible pase al estado infectado.</li>
+              <li><em class="blue">&gamma;</em> hace refencia a la probabilidad o tasa a la que un infectado muere o se recupera.</li>
+          </ul>
+          <p>
+              Supongamos que tenemos una población finita de nueve individuos, los cuales por simplicidad vamos a representar en el espacio de forma cuadrada como sigue:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Al principio todos son scueptibles a contagiarse. Para que un proceso infeccioso con el modelo SIR modifique el estado de la población es necesario contar
+              con al menos un individuo en estado infectado, de otra forma no habría manera de contagiarse.
+          </p>
+          <p>
+              Supongamos ahora que uno de estos nueve individuos se infecta, ahora nuestra población queda de la siguiente forma:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-warning">I</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              en esta ocasión tenemos un caso inicial, por lo que la simulación puede comenzar. Suopongamos por simplicidad que los pasos de la simulación van a
+              ser diarios (i.e. un paso = un día). El cuadro de arriba hace referencia al día 0, donde comienza nuestra simulación.
+          </p>
+          <p>
+              El siguiente paso sería simular el día 1. Para lograrlo debemos de actualizar los estados de cada uno de nuestros individuos según el modelo, del
+              cual podemos inferir las siguientes reglas básicas:
+          </p>
+          <ul>
+              <li>Si un susceptible entra en contacto con un infectado, tiene una probabilidad <em class="blue">&beta;</em> de contagiarse depués de la interacción.</li>
+              <li>Un infectado, por el simple hecho de estarlo, tiene una probabilidad <em class="blue">&gamma;</em> de pasar al estado de removido.</li>
+          </ul>
+          <p>
+              Volviendo a nuestra simulación, para el individuo de la esquina superior izquierda actualizaríamos su estado según sus vecinos. Podemos ver que ninguno de los
+              individuos que lo rodean está infectado, de forma que no hay posibilidad de que tenga contacto con uno. Esto conlleva que no haya forma de cambiar su estado
+              por lo que continúa como susceptible para el siguiente paso de simulación.
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-success">S</td><td class="table-primary">S</td><td class="table-warning">I</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Avanzamos una casilla hacia la derecha en la fila, volvemos a encontrar que el individuo se encuentra en el estado de susceptible. Sin embargo, en esta
+              ocasión uno de los individuos a sus costados está infectado, por tanto tiene una interacción y probabilidad de contagiarse.
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-success">S</td><td class="table-warning">I</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Para determinar si se infecta o no, se debe de <em>lanzar una moneda cargada</em>. Este enunciado quiere decir que, si lanzamos una moneda solo hay dos posibilidades: águila o sol,
+              pero con la particularidad de que hay una probabilidad <em class="blue">&beta;</em> que caiga sol (o 1 por ejemplo) y una probabilidad
+              <em class="blue">1 - &beta;</em> de que caiga águila (o 0). Dependiendo del valor que caiga es la decisión que se toma, en este caso si cae <em>sol</em>
+              el individuo susceptible se contagia, mientras que si cae <em>águila</em> el individuo susceptible sigue siendo susceptible (no se infectó).
+          </p>
+          <p>
+              Supongamos para nuestra simulación que <em>la moneda cargada</em> cayó en sol, por lo que el individuo sí se contagia. De forma que ahora nuestros
+              individuos quedan de la siguiente forma:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-warning">I</td><td class="table-warning">I</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Ahora tenemos un nuevo infectado, por lo que el patógeno se está propagando a través de nuestra población simulada, igual que en la vida real.
+          </p>
+          <p>
+              De forma similar ahora pasamos a evaluar el estado de nuestro siguiente individuo, notamos que en este caso ya estaba infectado.
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-success">I</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Probablemente una de las primeras cosas que vas a notar es que el segundo individuo de la primera fila, que en nuestro paso anterior habíamos determinado
+              como infectado, ya no lo está. No, no es un error de dedo, esto es porque, a pesar de que ya fue determinado como infectado, al principio del <em>día</em> o
+              paso de nuestra simulación estaba como susceptible, por lo que todas las interacciones de ese día con los demás fueron como susceptible, ¿o a poco creías que
+              el patógeno iba a decidir empezar a contagiar por la esquina superior izquierda y avanzar así como lo hicimos nosotros?
+          </p>
+          <p>
+              Por tanto va a ser muy importante que guardes temporalmente la nueva distribución de los estados en la población para el nuevo paso de simulación, así como
+              no perder los estados iniciales en cada uno antes de la actualización.
+          </p>
+          <p>
+              Habiendo mencionado eso, retomemos el proceso de actualización del individuo infectado. Para hacerlo se sigue un procedimiento similar al antes mencionado
+              de la <em>moneda cargada</em> pero ahora con probabilidad <em class="blue">&gamma;</em> de que el individuo modifique su estado a removido y
+              <em class="blue">1 - &gamma;</em> la probabilidad de que permanezca infectado. Supongamos que el ejercicio de la moneda cargada apuntó a que el individuo sí
+              pasa al estado de removido. Por lo que la población en el siguiente paso de simulación quedaría de la siguiente manera:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-warning">I</td><td class="table-dark">R</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Una vez que se haga este proceso para cada uno de los individuos de la población, se abrá terminado el paso de simuñación y se podrá pasar al siguiente.
+              para nuestro ejemplo supongamos que después del primer paso de simulación quedó como sigue:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-warning">I</td><td class="table-dark">R</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-warning">I</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Supongamos que hacemos otro paso de simulación. Ahora nuestra población podría tener la siguiente distribución:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-dark">R</td><td class="table-dark">R</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-warning">I</td><td class="table-warning">I</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-warning">I</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Y así sucesivamente:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-warning">I</td><td class="table-dark">R</td><td class="table-dark">R</td></tr>
+              <tr><td class="table-warning">I</td><td class="table-warning">I</td><td class="table-dark">R</td></tr>
+              <tr><td class="table-primary">S</td><td class="table-primary">S</td><td class="table-dark">R</td></tr>
+            </tbody>
+          </table>
+          <p>
+              ¿En qué momento el modelo llega a un estado estable? Esto sucede cuando ya no hay infectados en la población, de forma que ya no pueda haber transmisiones del patógeno entre los individuos.
+              Por tanto solo existen dos escenarios finales posibles, ¿los puedes deducir?
+          </p>
+
+          <hr>
+          <h2>Proyecto</h2>
+          <p>
+              En este proyecto desarrollarás un código que lleve a cabo simulaciones con el modelo SIR como la descrita anteriormente.
+          </p>
+          <p>
+              Tu programa le pedirá cuatro parámetros al usuario: el tamaño de la población, el número de infectados iniciales, el valor de
+              <em class="blue">&beta;</em> como el de <em class="blue">&gamma;</em>.
+          </p>
+          <p>
+              Una vez que haya ingresado los datos, tu código deberá de distribuir el número de casos inciales indicado a lo largo de la
+              población y llevar a cabo la simulaciuón del proceso infeccioso hasta que haya llegado a su estado estable.
+          </p>
+          <p>
+              Probablemente sea más ilustrativo el fenómeno si despliegas en cada paso de simulación el estado de cada individuo en la población.
+              Al final de la simulación deberás de informar al usuario en cuántos días o simulaciones se llegó al estado estable, así como
+              el número de susceptibles y removidos quedaron en la población al término de la misma.
+          </p>
+
+          <hr>
+          <h2>Ayudas</h2>
+          <p>
+              En la carpeta comprimida (.zip) que descargaste al principio de esta página encontrarás los códigos para comenzar con el proyecto. Esta carpeta
+              tiene dos scripts que te ayudarán a realizarlo.
+          </p>
+          <h4><code class="mc">Ayudas.py</code></h4>
+          <p>
+              Contiene la función <code class="mc">ObtenerNumeroEntero(pregunta)</code> que pide al usuario un número entero imrpimiendo en pantalla el parámetro opcional
+              <code class="mc">pregunta</code>. Regresa el número entero ingresado por el usuario.
+          </p>
+          <p>
+              Tiene la definición de la función <code class="mc">ObtenerNumeroFlotante(pregunta, min, max)</code> que pide un número decimal al usuario imrpimiendo <code class="mc">pregunta</code>
+              que es un parámetro opcional. Cuanta con otros dos parámetros opcionales: <code class="mc">min</code> y <code class="mc">max</code>. Si no se especifica ninguno de ellos el número
+              ingresado por el usuario puede estar en el rango (-&infin;, &infin;), mientras que si se especifica el valor <code class="mc">min</code> el
+              rango para el número ingresado por el ususario sería [<code class="mc">min</code>, &infin;), de forma comtraria si se especifica <code class="mc">max</code>
+              el rango sería (-&infin;, <code class="mc">max</code>] y por último, si ambos se especifican el rango de los posibles valores quedan acotados por
+              [<code class="mc">min</code>, <code class="mc">max</code>]. El valor regresado por la función es un número de punto flotante o decimal ingresado por el usuario en el
+              rango especificado.
+          </p>
+          <h4><code class="mc">SimulacionEpidemiologica.py</code></h4>
+          <p>
+              Este será tu código principal. En él se importan las funciones <code class="mc">ObtenerNumeroEntero</code> y <code class="mc">ObtenerNumeroFlotante</code> antes descritas,
+              del código <code class="mc">Ayudas.py</code>. Además de que importa la librería de <code class="mc">numpy</code> como <code class="mc">np</code>.
+          </p>
+          <p>
+              Este código cuenta también con tres asignaciones de las variables <code class="mc">dimension</code> que será el número de personas que el usuario espera que haya en la simulación.
+              <code class="mc">iniciales</code> que será el número de infectados iniciales en la simulación, también ingresado por el usuario. Igualmente pide al usuario que indique el valor
+              de los parámetros <em class="blue">&beta;</em> y <em class="blue">&gamma;</em> los cuales se asignan a las variables <code class="mc">beta</code> y <code class="mc">gamma</code>
+              respectivamente. Ambos parámetros están delimitados por el rango [0, 1] usando los parámetros <code class="mc">min</code> y <code class="mc">max</code> de <code class="mc">ObtenerNumeroFlotante</code>.
+          </p>
+          <p>
+              En este proyecto daremos forma cuadrada a la distribución de personas, por lo que se tomará la raíz cuadrada de <code class="mc">dimension</code> y se crea una tupla
+              <code class="mc">dimensiones = (dimension, dimension)</code>. Esta tupla será la que indique las dimensiones del cuadrado. Para hacerlo se utiliza la función <code class="mc">zeros</code>
+              de <code class="mc">numpy</code> que creará un arreglo con las dimensiones especificadas, en nuestro caso por <code class="mc">dimensiones</code>, mientras que
+              inicializa todos sus elementos en cero. Este arreglo se asigna a la variable <code class="mc">personas</code>.
+          </p>
+          <p>
+              Posteriormente se llama la función <code class="mc">CasosIniciales</code> que su intención es distribuir el número de casos iniciales a lo largo de la población. Hemos incluiido
+              la definición inicial de la función, dejándote como tarea la implementación.
+          </p>
+          <p>
+              Por último se encuentra un ciclo <code class="mc">while</code> el cual tiene como propósito llevar a cabo un paso de simulación hasta que se tope con el estado estable antes mencionado,
+              donde ya no haya infectados en la población. En cada una de sus iteraciones el ciclo llama a la función <code class="mc">PasoSimulacion</code> la cual ya hemos definido para tí, pero que
+              te dejamos la tarea de implementarla.
+          </p>
+          <p>
+              Podrás observar que el arreglo <code class="mc">personas</code> es un arreglo de valores numéricos. Esto nos será de ayuda para la implementación, ya que generalmente es más sencillo trabajar
+              con números, en lugar de caracteres o cadenas de caracteres (strings). Por tanto para este proyecto, y en particular para la implementación del arreglo <code class="mc">personas</code>
+              utilizaremos el siguiente mapeo entre el estado de la persona y el número que tendrá asignado su correspondiente elemento:
+          </p>
+          <ul>
+              <li>El estado susceptible <strong>S</strong>, tendrá asignado el valor <strong>0</strong>.</li>
+              <li>El estado infectado <strong>I</strong>, tendrá asignado el valor <strong>1</strong>.</li>
+              <li>El estado removido <strong>R</strong>, tendrá asignado el valor <strong>2</strong>.</li>
+          </ul>
+          <p>
+              Por tanto esta tabla:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">S</td><td class="table-dark">R</td></tr>
+              <tr><td class="table-warning">I</td><td class="table-warning">I</td></tr>
+              <tr><td class="table-dark">R</td><td class="table-primary">S</td></tr>
+            </tbody>
+          </table>
+          <p>
+              Y esta otra:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-primary">0</td><td class="table-dark">2</td></tr>
+              <tr><td class="table-warning">1</td><td class="table-warning">1</td></tr>
+              <tr><td class="table-dark">2</td><td class="table-primary">0</td></tr>
+            </tbody>
+          </table>
+          <p>
+              son equivalentes. Siguiendo esta equivalencia es como funciona el ciclo <code class="mc">while</code> que está escrito en el código.
+          </p>
+
+          <hr>
+          <h2>Especificación</h2>
+          <p>
+              Para lograr este proyecto deberás de completar las funciones <code class="mc">CasosIniciales</code> y <code class="mc">PasoSimulacion</code>
+              definidas en <code class="mc">SimulacionEpidemiologica.py</code> de forma que puedan llevar llevar a cabo lo siguiente:
+          </p>
+          <ul>
+              <li>La función <code class="mc">CasosIniciales</code> deberá asignar el estado de infectado al número de elementos marcado por la variable <code class="mc">iniciales</code>,
+              que recibe como argumento. La forma de distribuirlos te la dejamos a libertad, pero te recomendamos probar con varias para apreciar la importancia que tienen en el fenómeno.</li>
+              <li>Completar la función <code class="mc">PasoSimulacion</code> de forma que cuando se llame sea capaz de actualizar todos los elementos en el arreglo <code class="mc">personas</code>
+              según el caso en que se encuentre cada elemento y las reglas indicadas por el modelo SIR.</li>
+          </ul>
+          <p>
+              <strong>Nota:</strong> para la simulación considera únicamente los individuos que se encuentran a distancia uno del elemento a actualizar. Esto quiere decir que únicamente si está inmediatamente
+              después ya sea de forma vertical, horizontal o diagonal podrá afectar al individuo a actualizar. Algo como lo siguiente:
+          </p>
+          <table class="table table-bordered center-table" style="width: 20%;">
+            <tbody>
+              <tr><td class="table-secondary">1</td><td class="table-secondary">2</td><td class="table-secondary">0</td><td>0</td></tr>
+              <tr><td class="table-secondary">1</td><td class="table-success">0</td><td class="table-secondary">0</td><td>0</td></tr>
+              <tr><td class="table-secondary">2</td><td class="table-secondary">0</td><td class="table-secondary">0</td><td>0</td></tr>
+              <tr><td>2</td><td>0</td><td>0</td><td>0</td></tr>
+            </tbody>
+          </table>
+          <p>
+              donde el elemento a actualizar es el de color verde, y aquellos que se toman en cuenta para actualizar su estado son los marcados en gris. Toma en cuenta que,
+              por cada infectado enntre estos individuos se debe de <em>lanzar la moneda cargada</em> para decidir si infectan o no al individuo en verde; de forma que para este caso
+              se debe de lanzar una primera moneda, si con esta no se infecta el individuo, entonces se lleva a cabo la segunda. Si en ninguna de las dos sale infectado, el individuo seguirá como
+              susceptible para el siguiente paso de simulación, de lo contario entrará al estado infectado.
+          </p>
+
+          <hr>
+          <h2>Walkthrough</h2><br>
+          <div class="container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/SySoy3ARDW8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <hr>
+          <h2>Resultados esperados</h2>
+          <p>
+              Tu programa deberá de llevar a cabo una simulación del modelo SIR en una población indicada por los parámetros indicados por el usuario: población, número de casos iniciales,
+              valor de los parámetros <em class="blue">&beta;</em> y <em class="blue">&gamma;</em>. Deberá de imprimir el estado de la población en cada día de simulación, y al llegar al final
+              deberá de reportar el número de días que duró la simulación, así como el número de susceptibles y removidos al final del proceso infeccioso. Deberá de mostrar un comportamiento
+              similar al siguiente:
+          </p>
+          <div class="w3-panel w3-card w3-light-grey">
+              <p> <br>
+                  $ python SimulacionEpidemiologica.py <br> <br>
+                  ¿Cuántas personas hay en la simulación?: 4 <br>
+                  ¿Cuántos contagiados iniciales hay?: 1 <br>
+                  ¿Cuál es el valor de beta?: 0.3 <br>
+                  ¿Cuál es el valor de gamma?: 0.5 <br> <br>
+              </p><pre>
+  Día 0
+  array([[0, 1],
+         [0, 0]])
+
+  Día 1
+  array([[1, 2],
+         [0, 0]])
+
+  Día 2
+  array([[1, 2],
+         [0, 0]])
+
+  Día 3
+  array([[2, 2],
+         [0, 0]])
+
+  Final de la simulación en día 3.
+  2 Suceptibles.
+  2 Removidos.
+              </pre>
+          </div>
+          <p>
+              Una vez que tu programa sea capaz de simular un modelo SIR para emular un proceso infeccioso, habrás culminado con éxito tu segundo proyecto.
+          </p> <br> <br>
+        </main>
+        <footer> <br>
+          <div class="text-center">
+          <p>
+            Curso impartido por la <a target="_blank" class="text-dark" href="http://www.enesjuriquilla.unam.mx/">ENES Juriquilla</a>.
+          </p>
+        </div>
+        </footer>
+
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+        <script>w3CodeColor();</script>
+    </body>
+</html>

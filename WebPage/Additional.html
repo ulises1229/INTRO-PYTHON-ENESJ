@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Curso Introducción a Python</title>
+    <link href="static/icono.ico" rel="icon">
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="script" href="static/script.js">
+    <!-- Boostrap code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Sidebar nice display -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Python code highlight -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <aside class="sidebar">
+          <h2><a class="title" href="index.html">Introducción al Análisis y Visualización de Datos en Python</a></h2>
+          <hr>
+
+          <a href="index.html">Introducción al curso</a>
+              <button class="dropdown-btn"> Introducción a Python
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                  <a href="IntroPython.html">Ejercicios en clase</a>
+                  <a href="ProyectoIntro.html">Proyecto final</a>
+                  <a href="#">Mini Proyectos</a>
+              </div>
+              <button class="dropdown-btn"> Almacenamiento de Datos
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                  <a href="AlmacenamientoDatos.html">Ejercicios en clase</a>
+                  <a href="ProyectoAlmacenamientoDatos.html">Proyecto final</a>
+                  <a href="#">Mini Proyectos</a>
+              </div>
+              <button class="dropdown-btn"> Manipulación de Datos
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                  <a href="ManipulacionDatos.html">Ejercicios en clase</a>
+                  <a href="ProyectoManipulacionDatos.html">Proyecto final</a>
+                  <a href="#">Mini Proyectos</a>
+              </div>
+              <button class="dropdown-btn"> Matemáticas Simbólicas y Visualización de Datos
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                  <a href="VisualizacionDatos.html">Ejercicios en clase</a>
+                  <a href="ProyectoVisualizacionDatos.html">Proyecto final</a>
+                  <a href="#">Mini Proyectos</a>
+              </div>
+              <button class="dropdown-btn"> Inteligencia Artificial
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                  <a href="InteligenciaArtificial.html">Ejercicios en clase</a>
+                  <a href="ProyectoInteligenciaArtificial.html">Proyecto final</a>
+                  <a href="#">Mini Proyectos</a>
+              </div>
+              <a class="selected" href="#">Recursos adicionales</a>
+              <a href="About.html">Sobre este curso</a>
+
+
+          <hr>
+          <h3>Impartido por:</h3>
+          <ul>
+            <li>Dr. Ulises Olivares</li>
+            <li>Walter Rosales</li>
+          </ul>
+          <hr>
+          <img src="static/logo.png" class="menu-image" alt="ENES logo">
+          <img src="static/UNAM.png" class="menu-image" alt="UNAM logo">
+        </aside>
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              console.log(dropdownContent.innerHTML);
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+              });
+            }
+        </script>
+
+        <main>
+        <h1 class="title">Recursos adicionales</h1>
+            <hr>
+            <h2>Cambiar directorio en una terminal</h2>
+            <p>
+              Dependiendo del sistema operativo en el que estés trabajando al abrir una terminal se abrirá en una ruta específica.
+              Para moverte entre los directorios tal y como lo haces al usar el <em>Explorador de archivos</em> en Windows o Linux, o <em>Finder</em>
+              en Mac OS, puedes ocupar el comando <code class="mc">cd</code> el cual presenta las siguientes variantes:
+            </p>
+            <ul class="custom-list">
+              <li><code class="mc">cd &lt;ruta&gt;</code> se ocupa para cambiar el directorio actual a la dirección especificada en <code class="mc">&lt;ruta&gt;</code></li>
+              <li><code class="mc">cd ..</code> se ocupa para regresar al directorio inmediatamente anterior en la ruta donde te encuentres.
+            </ul>
+            <p>
+              Puedes ver su comportamiento de la forma siguiente, suponiendo que empezamos en la ruta <code class="mc">Tutoriales/Videos</code>, y que
+              en ella hay una carpeta llamada <code class="mc">Finales</code>:
+            </p>
+            <div class="w3-panel w3-card w3-light-grey">
+              <p> <br>
+                /Tutoriales/Videos$ cd Finales <br>
+                /Tutoriales/Videos/Finales$ cd .. <br>
+                /Tutoriales/Videos$
+              </p>
+            </div>
+            <div class="alert alert-info" role="alert">
+              Si eres usuario de Windows, el signo <code class="mc">$</code> es reemplazado por el signo <code class="mc">&gt;</code> al final de la ruta actual.
+              Para ver los archivos en la ruta actual puedes ocupar el comando <code class="mc">dir</code> en Windows, para Linux y Mac OS puedes ocupar
+              <code class="mc">ls</code>.
+            </div>
+            <p>
+              De esa forma podrás navegar por todos tus archivos y directorios a través de la terminal.
+            </p>
+
+            <hr>
+            <h2>Ejecutar un programa de Python desde la terminal</h2>
+            <p>
+              Para correr un programa desde la terminal se utiliza el siguiente comando <code class="mc">python &lt;ruta&gt;</code>
+              siendo la ruta la ubicación del archivo a ejecutar. Si ya te encuentras en el directorio donde se encuentra el archivo a ejecutar
+              puedes simplemente escribir el comando <code class="mc">python &lt;archivo&gt;</code> sin necesidad de escribir la ruta completa.
+            </p>
+            <div class="alert alert-info" role="alert">
+              Si en tu caso <code class="mc">python</code> ejecuta la versión 2 de python, el procedimiento es igual, solo que cambiando el comando
+              por <code class="mc">python3</code> que apunta a la versión 3 de python instalada en tu computadora.
+            </div>
+
+
+            <hr>
+            <h2>Abrir Jupyter Notebook en un directorio específico</h2>
+            <p>
+                Para lograrlo simplemente navega hasta el directorio donde deseas abrir el IDE. Utiliza el comando
+                <code class="mc">cd</code> para navegar hasta él y posteriormente ejecuta el comando <code class="mc">jupyter notebook</code>,
+                esto abrirá el explorador de archivos del jupyter en la actual ruta activa de la terminal.
+            </p>
+
+            <hr>
+            <h2>Correr un kernel (notebook) en Kaggle</h2>
+            <p>
+              Para todos aquellos que <strong>no hayan podido instalar PyTorch en su computadora</strong>, ya sea porque su arquitectura es de 32-bits, o porque
+              tuvieron dificultades durante la instalación, pueden ocupar una alternativa para llevar a cabo las prácticas de inteligencia artificial.
+            </p>
+            <p>
+              Esta alternativa consiste en ocupar un servicio de terceros para ejecutar los códigos en notebooks remotos. Esto se lleva a cabo a través del sitio web
+              <a class="text-info" href="https://www.kaggle.com/">https://www.kaggle.com/</a>.
+            </p>
+            <p>
+              Deberás de crear una cuenta (es totalmente gratuito). Una vez que hayas creado tu cuenta accede al sitio y busca en el menú que te aparece en la sección
+              de la izquierda la opción <em class="blue">Notebooks</em>.
+            </p>
+            <img class="center" style="width: 20%;" src="static/kaggle/Notebook.png" alt="Notebook button">
+            <br><p>
+              Después en la parte superior derecha aparecerá el botón <em class="blue">+ New Notebook</em>,
+              le das click.
+            </p>
+              <img class="center" style="width: 50%;" src="static/kaggle/Notebooks.png" alt="New notebook button">
+            <br><p>
+              En las opciones desplegadas selecciona <em>Python</em> como lenguaje de programación, y <em>Notebook</em> como tipo. Posteriormente seleccionas el
+              botón <em class="blue">create</em>.
+            </p>
+            <img class="center" style="width: 30%;" src="static/kaggle/Options.png" alt="Notebook options">
+            <br><p>
+              Listo, ya tienes un notebook corriendo en la nube; este funciona de forma muy similar a Jupyter Notebook, por lo que rápidamente te acostumbrarás.
+            </p>
+            <p>
+              Probablemente te sea útil la sección <em class="blue">Data</em> que aparece en el menú derecho del Notebook. Ahí podrás subir tus archivos de datos para analizarlos posteriormente.
+              El procedimiento es muy sencillo, seleccionas la opción <em class="blue">+ Add data</em>.
+            </p>
+            <img class="center" src="static/kaggle/AddData.png" alt="Add data button">
+            <br><p>
+              En el menú que se muestra seleccionas la opción <em class="blue">Upload</em> y luego podrás seleccionar
+              los archivos desde tu computadora.
+            </p>
+            <img class="center" style="width: 30%;" src="static/kaggle/Dataset.png" alt="Datasets"> <br>
+            <div class="alert alert-info" role="alert">
+              <strong>OJO</strong>, puedes subir varios archivos en un mismo <em>dataset</em>. Te recomendamos agregar, por ejemplo, todos los datos de un mismo proyecto en un único dataset.
+            </div>
+            <p>
+              Una vez que hayas subido todos tus datos, sigue con el procedimiento hasta que te
+              aparezca un mensaje en donde te informe que tus datos han sido subidos. Una vez que sea así, puedes verificar que se hayan cargado en la sección <em class="blue">Data</em>, así como
+              ejecutando la primera celda de código del notebook que viene por default: el output serán las rutas a tus datos.
+            </p>
+            <p>
+              Una vez que hayas creado tu dataset, podrás acceder a él desde cualquier notebook dentro de Kaggle de forma sencilla. Por lo que no tendrás que cargar tus datos en
+              varias ocasiones. De ahí en adelante todo es como ya lo conocías antes, solo que en la nube y en un servidor de un tercero.
+            </p>
+            <p>
+              No pierdas la oportunidad de revisar el sitio, tiene una cantidad abrumadora de recursos: desde notebooks, tutoriales, datasets y ¡hasta competencias de data science!
+            </p>
+        </main>
+        <footer> <br>
+          <div class="text-center">
+          <p>
+            Curso impartido por la <a target="_blank" class="text-dark" href="http://www.enesjuriquilla.unam.mx/">ENES Juriquilla</a>.
+          </p>
+        </div>
+        </footer>
+
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+        <script>w3CodeColor();</script>
+    </body>
+</html>

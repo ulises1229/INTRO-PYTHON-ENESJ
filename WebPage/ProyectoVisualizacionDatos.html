@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Curso Introducción a Python</title>
+    <link href="static/icono.ico" rel="icon">
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="script" href="static/script.js">
+    <!-- Boostrap code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Sidebar nice display -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Python code highlight -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+    </head>
+    <body>
+        <aside class="sidebar">
+          <h2><a class="title" href="index.html">Introducción al Análisis y Visualización de Datos en Python</a></h2>
+          <hr>
+
+          <a href="index.html">Introducción al curso</a>
+            <button class="dropdown-btn"> Introducción a Python
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="IntroPython.html">Ejercicios en clase</a>
+                <a href="ProyectoIntro.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Almacenamiento de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="AlmacenamientoDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoAlmacenamientoDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Manipulación de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="ManipulacionDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoManipulacionDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn selected"> Matemáticas Simbólicas y Visualización de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="VisualizacionDatos.html">Ejercicios en clase</a>
+                <a class="selected" href="#">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Inteligencia Artificial
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="InteligenciaArtificial.html">Ejercicios en clase</a>
+                <a href="ProyectoInteligenciaArtificial.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <a href="Additional.html">Recursos adicionales</a>
+            <a href="About.html">Sobre este curso</a>
+
+          <hr>
+          <h3>Impartido por:</h3>
+          <ul>
+            <li>Dr. Ulises Olivares</li>
+            <li>Walter Rosales</li>
+          </ul>
+          <hr>
+          <img src="static/logo.png" class="menu-image" alt="ENES logo">
+          <img src="static/UNAM.png" class="menu-image" alt="UNAM logo">
+        </aside>
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              console.log(dropdownContent.innerHTML);
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+              });
+            }
+        </script>
+
+        <main>
+          <h1 class="title">Proyecto Unidad 4: Visualizando el COVID-19</h1>
+
+          <hr>
+          <p>
+              Al finalizar el proyecto, tu código deberá de ser capaz de replicar las siguientes imágenes:
+          </p>
+          <div class="row">
+            <div class="col"><img src="static/resources/MovDatos.png" class="menu-image" style="width: 80%;" alt="Mexicos mobility trends"></div>
+            <div class="col"><img src="static/resources/MovCases.png" class="menu-image" style="width: 80%;" alt="Mexicos movility vs cases"></div>
+          </div>
+          <div class="row">
+            <div class="col"><img src="static/resources/SIRODE.png" class="menu-image" style="width: 80%;" alt="SIR model"></div>
+            <div class="col"><img src="static/resources/SIRBar.png" class="menu-image" style="width: 80%;" alt="SIR daily cases"></div>
+          </div>
+
+          <hr><br>
+          <h2>Código Inicial</h2>
+          <p>Descarga los archivos necesarios para comenzar este proyecto.</p>
+          <a href="static/Proyecto4.zip" class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; " download>Descargar archivos</a>
+
+          <hr>
+          <h2>Inspiración</h2>
+          <p>
+              En proyectos anteriores hemos trabajado con modelos epidemiológicos, datos reales de contagios en nuestro país y estadísticas sobre los cambios en
+              tendencias de movilidad. Todo esto lo hemos trabajdo simplemente en códigos, desplegando números, arreglos y DataFrames, sin embargo en muchas ocasiones
+              para que el ser humano puede identificar patrones, reconocer comportamientos o simplemente visualizar de forma más amena la información utiliza gráficas.
+          </p>
+          <p>
+              Por ejemplo, cuando se hace una presentación sobre un tema, generalmente se muestran los gráficos obtenidos a partir de esos datos, no simplemente los
+              valores ordenados en tablas. Otro ejemplo es con las conferencias sobre la pandemia en nuestro país, la forma en que representan estos datos es a través de
+              gráficas de barras, no tablas de datos.
+          </p>
+          <p>
+              Siendo así, ahora es turno de convertir nuestros proyectos anteriores en algo más cercano a nosotros, las tablas son muy buenas para las computadoras, las
+              gráficas son mejores para los humanos.
+          </p>
+          <p>
+              Recordarás que, en el <a class="text-info" href="/ProyectoManipulacionDatos">proyecto de la Unidad 3</a> trabajamos con los conjuntos de datos de movilidad de Google,
+              así como los números de la pandemia brindados por el Gobierno de México. Ahora es turno de sacar provecho de ese DataFrame que creaste y entender las afectaciones o beneficios
+              que han tenido los cambios de movilidad en los diferentes estado de nuestro país. Antes de eso, tal vez sea buena idea ver primero los comportamientos de movilidad, ya que hacerlo
+              en un DataFrame de cientos de filas no es tarea fácil, pero una gráfica puede decirnos mucho más.
+          </p>
+          <p>
+              Por otra parte, recordarás el modelo SIR que trabajaste en el <a class="text-info" href="/ProyectoAlmacenamientoDatos">proyecto de la Unidad 2</a>, donde
+              trabajamos con un arreglo de personas y simulábamos un proceso epidemiológico. Vamos a retomar ese modelo también aquí, pero de una forma más rigurosa matemáticamente.
+          </p>
+          <p>
+              Recordarás que anteriormente simulábamos por días, un día a la vez. Este proceso se conoce como <em>discreto</em> lo que quiere decir que vamos a pasos enteros,
+              por ejemplo de uno en uno los días. Sin embargo, podrás decir, y con toda la razón, que no es así como funcionan en la realidad. Resulta que estos procesos son un continuo
+              ya que en ningún momento se detienen. Además, recordarás que habíamos impuesto una forma cuadrada para la distribución de nuestra población, así como que los individuos
+              fueran estáticos y únicamente pudieran estar en contacto con los de sus alrededores. Bien, pues para librarnos de estas restricciones <em>forzadas</em> vamos a definir
+              el modelo SIR como una ecuación diferencial (un proceso continuo, que dicta los cambios de una variable con respecto a otra).
+          </p>
+          <p>
+              Para los susceptibles tenemos la siguiente ecuación:
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                  <mfrac>
+                      <mrow><mi>d</mi><mrow><mi>S</mi></mrow></mrow>
+                      <mrow><mi>d</mi><mi>t</mi></mrow>
+                  </mfrac>
+                  <mo>=</mo>
+                  <mrow>
+                      <mrow><mi>&minus;</mi><mrow><mi>&beta;</mi></mrow></mrow>
+                      <mfrac>
+                          <mrow><mi>I</mi><mrow><mi>S</mi></mrow></mrow>
+                          <mrow><mi>N</mi></mrow>
+                      </mfrac>
+                  </mrow>
+                  </mrow>
+              </math>
+              Podemos entender la ecuación si analizamos por partes el lado derecho.
+          </p>
+          <p>
+              Cada infectado tiene una probabilidad
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                   <mfrac>
+                       <mrow><mi>1</mi></mrow>
+                       <mrow><mi>N</mi></mrow>
+                   </mfrac>
+                  </mrow>
+              </math>
+              de interactuar con un susceptible. Si tenemos <em>S</em> susceptibles, obtenemos entonces el término
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <mrow>
+                       <mfrac>
+                           <mrow><mi>S</mi></mrow>
+                           <mrow><mi>N</mi></mrow>
+                       </mfrac>
+                  </mrow>
+              </math>
+              .
+          </p>
+          <p>
+          Ahora, cada infectado tiene dicha probabilidad de interactuar con un susceptible, por tanto se obtiene
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                  <mrow><mi>I</mi></mrow>
+                      <mfrac>
+                          <mrow><mi>S</mi></mrow>
+                          <mrow><mi>N</mi></mrow>
+                      </mfrac>
+                  </mrow>
+              </math>
+              que es el término que define la proporción de infectados que interactúan con susceptibles.
+          </p>
+          <p>
+              Recordemos también que la tasa o probabilidad de que en una interacción entre infectado y susceptible haya contagio está
+              regulada por el factor <em class="blue">&beta;</em>, de ahí obtenemos que por cada interacción entre susceptibles e infectados se tiene la probabilidad
+              <em class="blue">&beta;</em> de que el susceptible se infecte y por tanto queda la ecuación siguiente
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                   <mrow>
+                      <mrow><mi>&beta;</mi></mrow>
+                          <mfrac>
+                              <mrow><mi>I</mi><mrow><mi>S</mi></mrow></mrow>
+                              <mrow><mi>N</mi></mrow>
+                          </mfrac>
+                  </mrow>
+              </math>
+          </p>
+          <p>
+              Finalmente, al ser el cambio de susceptibles en el tiempo, el valor debe de ser negativo puesto que si un susceptible se infecta,
+              pasa al estado de infectado, y por tanto reduce el número de personas susceptibles. Lo que nos queda modelado en la ecuación diferencial
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <mrow>
+                      <mfrac>
+                          <mrow><mi>d</mi><mrow><mi>S</mi></mrow></mrow>
+                          <mrow><mi>d</mi><mi>t</mi></mrow>
+                      </mfrac>
+                      <mo>=</mo>
+                      <mrow>
+                          <mrow><mi>&minus;</mi><mrow><mi>&beta;</mi></mrow></mrow>
+                          <mfrac>
+                              <mrow><mi>I</mi><mrow><mi>S</mi></mrow></mrow>
+                              <mrow><mi>N</mi></mrow>
+                          </mfrac>
+                      </mrow>
+                  </mrow>
+              </math>
+              que nos indica que el cambio de susceptibles en el tiempo (parte izquierda de la ecuación) está dado por la probabilidad <em class="blue">&beta;</em> de que en una
+              interacción entre infectado y susceptible, el segundo quede infectado.
+          </p>
+          <p>
+              Ahora veamos el caso de los removidos. Para este estado la ecuación diferencial luce de la forma siguiente
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <mrow>
+                      <mfrac>
+                          <mrow><mi>d</mi><mrow><mi>R</mi></mrow></mrow>
+                          <mrow><mi>d</mi><mrow><mi>t</mi></mrow></mrow>
+                      </mfrac>
+                      <mo>=</mo>
+                      <mrow><mi>&gamma;</mi><mrow><mi>I</mi></mrow></mrow>
+                  </mrow>
+              </math>
+          </p>
+          <p>
+              De nueva cuenta, si analizamos la parte derecha de la ecuación podemos enteder lo que nos dice. <em>I</em> es el número de infectados, y recordando que
+              <em class="blue">&gamma;</em> es la tasa o probabilidad de que un infectado se recupere o muera, entonces podemos entender que para cada infectado se calcula
+              la probabilidad de que sea removido y entonces pasa a ese estado. Por tanto tenemos que el número de removidos en el tiempo aumenta conforme los infectados se
+              recuperan a una tasa <em class="blue">&gamma;</em>
+          </p>
+          <p>
+              Por último tenemos la ecuación de los infectados que luce como sigue
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <mrow>
+                      <mfrac>
+                          <mrow><mi>d</mi><mrow><mi>I</mi></mrow></mrow>
+                          <mrow><mi>d</mi><mrow><mi>t</mi></mrow></mrow>
+                      </mfrac>
+                      <mo>=</mo>
+                      <mrow>
+                          <mrow><mi>&beta;</mi></mrow>
+                          <mfrac>
+                              <mrow><mi>I</mi><mrow><mi>S</mi></mrow></mrow>
+                              <mrow><mi>N</mi></mrow>
+                          </mfrac>
+                          <mrow><mi>&minus;</mi><mrow><mi>&gamma;</mi><mrow><mi>I</mi></mrow></mrow></mrow>
+                      </mrow>
+                  </mrow>
+              </math>
+          </p>
+          <p>
+              El lado derecho de esta ecuación contiene dos términos: el primero corresponde con los nuevos casos infectados y corresponde con el lado derecho de la ecuación
+              de los susceptibles, pero de signo positivo, esto quiere decir que se agregan los nuevos infectados que pasaron del estado susceptible. El segundo término es la tasa
+              a la que los infectados pasan al estado de removidos, e igualmente corresponde con el lado derecho de la ecuación pero ahora de los removidos, pero con signo
+              negativo ya que con cada nuevo removido se reduce el número de infectados.
+          </p>
+          <p>
+              De forma que nuestro sistema de ecuaciones diferenciales queda descrito de la forma siguiente para el cambio en el tiempo de los susceptibles
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <mrow>
+                      <mfrac>
+                          <mrow><mi>d</mi><mrow><mi>S</mi></mrow></mrow>
+                          <mrow><mi>d</mi><mi>t</mi></mrow>
+                      </mfrac>
+                      <mo>=</mo>
+                      <mrow>
+                          <mrow><mi>&minus;</mi><mrow><mi>&beta;</mi></mrow></mrow>
+                          <mfrac>
+                              <mrow><mi>I</mi><mrow><mi>S</mi></mrow></mrow>
+                              <mrow><mi>N</mi></mrow>
+                          </mfrac>
+                      </mrow>
+                  </mrow>
+              </math>
+              los infectados
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <mrow>
+                      <mfrac>
+                          <mrow><mi>d</mi><mrow><mi>I</mi></mrow></mrow>
+                          <mrow><mi>d</mi><mrow><mi>t</mi></mrow></mrow>
+                      </mfrac>
+                      <mo>=</mo>
+                      <mrow>
+                          <mrow><mi>&beta;</mi></mrow>
+                          <mfrac>
+                              <mrow><mi>I</mi><mrow><mi>S</mi></mrow></mrow>
+                              <mrow><mi>N</mi></mrow>
+                          </mfrac>
+                          <mrow><mi>&minus;</mi><mrow><mi>&gamma;</mi><mrow><mi>I</mi></mrow></mrow></mrow>
+                      </mrow>
+                  </mrow>
+              </math>
+              y los removidos
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <mrow>
+                      <mfrac>
+                          <mrow><mi>d</mi><mrow><mi>R</mi></mrow></mrow>
+                          <mrow><mi>d</mi><mrow><mi>t</mi></mrow></mrow>
+                      </mfrac>
+                      <mo>=</mo>
+                      <mrow><mi>&gamma;</mi><mrow><mi>I</mi></mrow></mrow>
+                  </mrow>
+              </math>
+              este conjunto de ecuaciones nos permiten modelar de mejor manera un fenómeno epidemiológico en una población.
+          </p>
+
+          <hr>
+          <h2>Proyecto</h2>
+          <p>
+              En este proyecto desarrollarás dos códigos independientes que deberán de exportar dos imágenes cada uno.
+          </p>
+          <p>
+              Uno de ellos deberá simular un modelo SIR a través del sistema de ecuaciones diferenciales antes mencionado, y al finalizar graficará
+              los valores de cada estado en el tiempo en una misma imagen. Además, con esos resultados deberá de calcular el número de casos diarios
+              en la simulación y hará un histograma con ellos.
+          </p>
+          <p>
+              El otro código tendrá que leer el archivo <code class="mc">.csv</code> con el DataFrame que contiene tanto los datos de movilidad
+              como los números de la pandemia en México (recuerda que ese DataFrame ya lo hiciste en tu proyecto pasado, así que no debe de haber mayor problema para la lectura). Una vez que tengas los datos,
+              harás un gráfico mostrando todos los cambios de tendencia de movilidad de un estado en particular (lo dejamos a tu elección) a lo largo del tiempo. Igualmente crearás otro gráfico diferente donde
+              coloques en el eje <em class="blue">x</em> el promedio de las tendencias de movilidad en un día, y en el eje <em class="blue">y</em> sus respectivos números (confirmados, defunciones y sospechosos), este será un gráfico de
+              dispersión (también llamado <em>scatter plot</em>).
+          </p>
+          <p>
+              Considera en todas las gráficas añadir los nombres de los ejes, las leyendas de lo que estás graficando así como el título que mejor describa
+              los datos graficados.
+          </p>
+
+          <hr>
+          <h2>Ayudas</h2>
+          <p>
+              En la carpeta comprimida (.zip) que descargaste al principio de esta página encontrarás dos códigos que serán los que ocupes para llevar a cabo tu proyecto.
+          </p>
+          <h4><code class="mc">ModeloSIR.py</code></h4>
+          <p>
+              Este script contiene una sección de código ya implementada para tí. En ella importamos toda la paquetería de <code class="mc">numpy</code> así como la función <code class="mc">odeint</code>
+              del paquete <code class="mc">scipy</code>, la cual funciona como un solucionador de ecuaciones diferenciales.
+          </p>
+          <p>
+              Para solucionar una ecuación diferencial en Python se necesitan tres cosas:
+          </p>
+          <ul>
+              <li>Modelo de ecuaciones diferenciales como una función</li>
+              <li>Condiciones iniciales</li>
+              <li>Tiempo de solución</li>
+          </ul>
+          <p>
+              En el código en <code class="mc">ModeloSIR.py</code> el modelo está definido en la función <code class="mc">sir</code> que toma como argumentos <code class="mc">y</code> que representa los valores del modelo,
+              <code class="mc">t</code> el tiempo en la simulación y <code class="mc">beta</code> y <code class="mc">gamma</code> son los parámetros de nuestro modelo (<em class="blue">&beta;</em>
+              y <em class="blue">&gamma;</em>). Sin embargo, además de los estados S, I y R, agregamos C, que va a llevar al cuenta de los infectados acumulados a lo largo del tiempo.
+          </p>
+          <p>
+              En esta función se descompone <code class="mc">y</code> en los valores de <code class="mc">S</code>, <code class="mc">I</code>, <code class="mc">R</code> y <code class="mc">C</code>. Una vez que se tienen,
+              sumamos <code class="mc">S</code>, <code class="mc">I</code> y <code class="mc">R</code> para conocer el valor total de la población <code class="mc">N</code>.
+              Con esto ya tenemos todos los valores necesarios para el modelo.
+          </p>
+          <p>
+              De forma que calculamos los valores de los dos términos que hay en nuestra ecuación de la siguiente manera:
+          </p>
+          <ul>
+              <li>
+                  <code class="mc">infectados=beta*I*S/N</code> que es el equivalente a
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mrow>
+                          <mrow><mi>&beta;</mi></mrow>
+                          <mfrac>
+                              <mrow><mi>I</mi><mi>S</mi></mrow>
+                              <mrow><mi>N</mi></mrow>
+                          </mfrac>
+                      </mrow>
+                  </math>
+              </li>
+              <li>
+                  <code class="mc">removidos = gamma*I</code> que equivale a
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mrow>
+                          <mrow><mi>&gamma;</mi><mi>I</mi></mrow>
+                      </mrow>
+                  </math>
+              </li>
+          </ul>
+          <p>
+              Una vez que contamos con estos términos, los acomodamos y les ponemos el signo correspondiente según el modelo SIR, quedando de esta forma
+              <code class="mc">dydt</code> el vector con las derivadas como <code class="mc">[-infectados, infectados-removidos, removidos, infectados]</code>. Con eso queda completa la implementación de las ecuaciones
+              diferenciales en una función.
+          </p>
+          <p>
+              Después, como toda ecuación diferencial, para poder resolverla es necesario contar con el conjunto de condiciones iniciales. En nuestro modelo SIR significa
+              cuántos susceptibles, infectados, removidos e infectados acumulados iniciales hay.
+          </p>
+          <p>
+              Antes de elegir los valores, es necesario que definamos un tamaño de población. Asignamos la variable <code class="mc">población</code> con esa intención. De
+              inicio le hemos dado un valor de <code class="mc">100</code>, pero siéntete libre de modificarlo a tu gusto.
+          </p>
+          <p>
+              Ahora que ya tenemos una población finita, podemos darle valores a las condiciones iniiciales de nuestro modelo. Podrás observar que deifinimos
+              <code class="mc">I0</code> como el número inicial de casos, y lo hemos asignado al valor <code class="mc">poblacion * 0.01</code> por darle un valor, pero
+              puedes cambiarlo a tu gusto.
+          </p>
+          <p>
+              Una vez teniendo esos dos valores construimos nuestro arreglo de condiciones iniciales <code class="mc">y0</code> inicializado con
+              <code class="mc">[poblacion - I0, I0, 0, I0]</code>, donde el primer valor son los susceptibles iniciales, el segundo los infectados iniciales, posteriormente
+              los removidos iniciales y finalmente los infectados acumulados, contemplando los iniciales.
+          </p>
+          <p>
+              Finalmente definimos <code class="mc">t</code> como los tiempos en los que se va a solucionar el sistema de ecuaciones, como lo hemos asignado es una sucesión de números
+              del 0 al 40 en pasos de uno en uno, para que cada uno representen un día.
+          </p>
+          <p>
+              Ya contando con todo lo anterior podemos resolver nuetsro modelo, para ello utilizamos <code class="mc">odeint</code> que recibe como argumentos <code class="mc">sir</code> el modelo,
+              <code class="mc">y0</code> que son las condiciones iniciales, <code class="mc">t</code> los tiempos de solución y como argumentos adicionales pasamos la tupla
+              <code class="mc">(beta, gamma)</code> que son los parámetros de nuestro modelo. Esta función nos regresa un arreglo con la solución de cada una de las variables del modelo en los tiempos de
+              simulación marcados en <code class="mc">t</code>. Por ejemplo, para acceder a los valores de susceptibles en el tiempo utilizamos la notación para arreglos de dos dimensiones <code class="mc">sol[:, 0]</code>
+              siendo <code class="mc">sol</code> el arreglo regresado por <code class="mc">odeint</code>.
+          </p>
+          <h4><code class="mc">VisualizacionMovilidad.py</code></h4>
+          <p>
+              En este código tú tendrás que hacer la implementación. Únicamente hemos importado los paquetes de <code class="mc">pandas</code> y <code class="mc">matplotlib.pyplot</code> que consideramos te serán de ayuda para la implementación.
+          </p>
+
+          <hr>
+          <h2>Especificación</h2>
+          <p>
+              Para llevar a cabo este proyecto deberás de implementar ambos códigos.
+          </p>
+          <p>
+              En <code class="mc">VisualizacionMovilidad.py</code> debéras de lograr lo siguiente:
+          </p>
+          <ul>
+              <li>Leer el archivo <code class="mc">.csv</code> con todos los datos.</li>
+              <li>Elegir uno de los estados (e.g. QUERETARO) y seleccionar de entre todos los datos únicamente los que le corresponden. Tal vez te sea de utilidad el método
+              <code class="mc">unique</code> de <code class="mc">pandas</code> para ver los diferentes estados que hay en el DataFrame.</li>
+              <li>Con los datos seleccionados podrás llevar a cabo la gráfica de movilidad. A esta le tendrás que agregar nombres a los ejes y su respectivo título.</li>
+              <li>Posteriormente tendrás que hacer un promedio de las tendencias de movilidad por día. Para ello puede que encuentres de utilidad la función <code class="mc">mean</code> de
+              <code class="mc">pandas</code> y presta atención en los argumentos que se le pueden pasar, recuerda que queremos hacer un promedio por fila, no por columna.</li>
+              <li>Ya que tengas los promedios de movilidad por día, podrás graficarlos contra el número de casos confirmados, defunciones y sospechosos en las mismas fechas, de forma que
+              puedas observar si existe algún tipo de tendencia o impacto de uno sobre otro. Por último recuerda agregar leyendas, título y ejes.</li>
+          </ul>
+          <p>
+              Para <code class="mc">ModeloSIR.py</code> deberás de graficar las series de tiempo de cada uno de los diferentes estados del modelo, los cuales se encuentran en
+              <code class="mc">sol</code>. Este gráfico deberá de contar con todos los esatdos en <code class="mc">sol</code>, cada una con su respectiva leyenda, así como los nombres en los ejes y título.
+          </p>
+          <p>
+              Ya que cuentes con la gráfica de los tres estados, tendrás que hacer el histograma de casos diarios. Este número no está en el modelo, sino que debes de calcularlo con los datos
+              que sí tienes de la simulación. La forma de obtenerlos es a atrvés de acumulados, ya que la diferencia entre un día y el otro es el número de casos confirmados en esa fecha. Ya que
+              tengas el arreglo con los datos, podrás hacer el histograma y agregarle sus ejes y título como a las anteriores gráficas.
+          </p>
+
+          <hr>
+          <h2>Walkthrough</h2><br>
+          <div class="container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/1ETiwXo0lg4?start=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <hr>
+          <h2>Resultados esperados</h2>
+          <p>
+              Al final, tus códigos deberán de ser capaces de generar las figuras que muestren el comportamiento de la simulación con el modelo SIR, tanto de los estados S, I, R y C a lor largo del tiempo,
+              así como el histograma con los casos diarios.
+          </p>
+          <p>
+              Si tienes curiosidad, modifica el código que hiciste en el <a class="text-info" href="/ProyectoAlmacenamientoDatos">proyecto de la Unidad 2</a> para que puedas
+              guardar en cada paso de simulación los valores de los estados S, I y R. Una vez que los tengas, grafícalos. ¿Qué tan parecidos son con los del modelo de ecuaciones diferenciales?
+              ¿Probaste con parámetros iguales? ¿Qué diferencias notas entre los gráficos? ¿Crees que representa el mismo fenómeno epidemiológico?
+          </p>
+          <p>
+              Por otro lado, para la visualización de datos de movilidad, al final del proyecto tu código deberá de ser capaz de graficar todos los valores de cada tendencia de movilidad como una serie
+              en el tiempo.
+          </p>
+          <p>
+              También podrás comparar los números de la actual pandemia y confrontarlos contra la movilidad de cada región. ¿Qué tanto cambian los resultados entre estados? ¿Crees que promediar
+              las tendencias de movilidad es lo suficientemente expresivo para entender el fenómeno? ¿Qué tal si la afectación de la movilidad sobre los números no es el mismo día, sino días depués? Si te
+              sientes con la suficiente seguridad, intenta responder algunas de estas preguntas a partir de modificar y gráficar los datos, ¿qué podrás encontrar?
+          </p>
+        </main>
+        <footer> <br>
+          <div class="text-center">
+          <p>
+            Curso impartido por la <a target="_blank" class="text-dark" href="http://www.enesjuriquilla.unam.mx/">ENES Juriquilla</a>.
+          </p>
+        </div>
+        </footer>
+
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+        <script>w3CodeColor();</script>
+    </body>
+</html>

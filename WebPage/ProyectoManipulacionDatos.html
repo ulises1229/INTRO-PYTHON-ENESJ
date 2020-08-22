@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Curso Introducción a Python</title>
+    <link href="static/icono.ico" rel="icon">
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="script" href="static/script.js">
+    <!-- Boostrap code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Sidebar nice display -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Python code highlight -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+    </head>
+    <body>
+        <aside class="sidebar">
+          <h2><a class="title" href="index.html">Introducción al Análisis y Visualización de Datos en Python</a></h2>
+          <hr>
+
+          <a href="index.html">Introducción al curso</a>
+            <button class="dropdown-btn"> Introducción a Python
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="IntroPython.html">Ejercicios en clase</a>
+                <a href="ProyectoIntro.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Almacenamiento de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="AlmacenamientoDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoAlmacenamientoDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn selected"> Manipulación de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="ManipulacionDatos.html">Ejercicios en clase</a>
+                <a class="selected" href="#">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Matemáticas Simbólicas y Visualización de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="VisualizacionDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoVisualizacionDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Inteligencia Artificial
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="InteligenciaArtificial.html">Ejercicios en clase</a>
+                <a href="ProyectoInteligenciaArtificial.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <a href="Additional.html">Recursos adicionales</a>
+            <a href="About.html">Sobre este curso</a>
+
+          <hr>
+          <h3>Impartido por:</h3>
+          <ul>
+            <li>Dr. Ulises Olivares</li>
+            <li>Walter Rosales</li>
+          </ul>
+          <hr>
+          <img src="static/logo.png" class="menu-image" alt="ENES logo">
+          <img src="static/UNAM.png" class="menu-image" alt="UNAM logo">
+        </aside>
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              console.log(dropdownContent.innerHTML);
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+              });
+            }
+        </script>
+
+        <main>
+          <h1 class="title">Proyecto Unidad 3: Movilidad y Cuarentena</h1>
+
+          <hr>
+          <p>
+              Al final del proyecto, tu programa deberá de contar con un DataFrame que luzca como el siguiente:
+          </p>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Confirmados</th>
+                    <th scope="col">Negativos</th>
+                    <th scope="col">Defunciones</th>
+                    <th scope="col">Tiendas y ocio</th>
+                    <th scope="col">Supermercados y farmacias</th>
+                    <th scope="col">Parques</th>
+                    <th scope="col">Estaciones de transporte</th>
+                    <th scope="col">Oficinas</th>
+                    <th scope="col">Hogares</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>AGUASCALIENTES</td>
+                    <td>2020-02-15</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>-14</td>
+                    <td>4</td>
+                    <td>-2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>AGUASCALIENTES</td>
+                    <td>2020-02-16</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>9</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>AGUASCALIENTES</td>
+                    <td>2020-02-17</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>-3</td>
+                    <td>3</td>
+                    <td>-4</td>
+                    <td>10</td>
+                    <td>-2</td>
+                  </tr>
+                  <tr>
+                      <th scope="row"></th>
+                      <td>...</td><td>...</td><td>...</td>
+                      <td>...</td><td>...</td><td>...</td>
+                      <td>...</td><td>...</td><td>...</td>
+                      <td>...</td><td>...</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4681</th>
+                    <td>ZACATECAS</td>
+                    <td>2020-07-01</td>
+                    <td>45</td>
+                    <td>49</td>
+                    <td>3</td>
+                    <td>-30</td>
+                    <td>-5</td>
+                    <td>-33</td>
+                    <td>-32</td>
+                    <td>-30</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4682</th>
+                    <td>ZACATECAS</td>
+                    <td>2020-07-02</td>
+                    <td>46</td>
+                    <td>58</td>
+                    <td>6</td>
+                    <td>-31</td>
+                    <td>-5</td>
+                    <td>-33</td>
+                    <td>-34</td>
+                    <td>-30</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4683</th>
+                    <td>ZACATECAS</td>
+                    <td>2020-07-03</td>
+                    <td>49</td>
+                    <td>38</td>
+                    <td>3</td>
+                    <td>-35</td>
+                    <td>-8</td>
+                    <td>-33</td>
+                    <td>-37</td>
+                    <td>-24</td>
+                    <td>12</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+
+          <hr><br>
+          <h2>Código Inicial</h2>
+          <p>Descarga los archivos necesarios para comenzar este proyecto.</p>
+          <a href="static/Proyecto3.zip" class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; " download>Descargar archivos</a>
+
+          <hr>
+          <h2>Inspiración</h2>
+          <p>
+              En la actual pandemia por COVID-19, una de las estrategias que mayor uso han tenido en todo el mundo han sido las restricciones de movilidad. En muchos países
+              de los diferentes continentes se han tomado estrategias para mitigar la propagación del virus a través de limitar e incluso prohibir el
+              acceso a las personas a diversos sitios o hasta cerrar establecimientos. Estas estrategias también fueron ocupadas en nuestro país, de forma
+              que se esperaba que su aplicación pudiera reducir el impacto del nuevo coronavirus en la sociedad mexicana.
+          </p>
+          <p>
+              Para poder indagar más en los verdaderos impactos y resultados de tomar esta estrategia, es necesario contar con datos que relaten la verdad sobre
+              la situación. Para ello ocuparemos dos fuentes de datos que nos serán de utilidad:
+              <a class="text-info" href="https://www.google.com/covid19/mobility/data_documentation.html?hl=es">datos de movilidad de Google</a> y
+              también los <a class="text-info" href="https://coronavirus.gob.mx/datos/">datos públicos del Gobierno de México</a>.
+          </p>
+          <p>
+              Ambos cuentan con datos que se puede relacionar y obtener información al respecto del impacto de la movilidad sobre la transmisión de la pandemia en las diferentes
+              regiones de nuestro país. Sin embargo, para poder obtener esa información es necesario juntar ambos conjuntos de datos, ya que esto facilita de forma considerable
+              el poder realizar gráficos u otro tipo de comparaciones.
+          </p>
+
+          <hr>
+          <h2>Proyecto</h2>
+          <p>
+              En este proyecto desarrollarás un código que lea los datos de movilidad de Google y los junte en un único DataFrame con los datos de la pandemia en México.
+          </p>
+          <p>
+              Para esto tu programa deberá de leer los archivos <code class="mc">.csv</code>, transformará y juntará todos los datos en un único DataFrame, el cual deberá de contener
+              toda la información correspondiente con la movilidad de cada uno de los estados en nuestro país, así como a nivel nacional, junto con el comportamiento epidemiológico
+              (i.e. casos confirmados, negativos y defunciones) de cada uno de ellos.
+          </p>
+          <p>
+              Una vez que hayas relacionado todos los datos de movilidad con sus respectivos índices epidemiológicos, tendrás un DataFrame con toda la información acerca del impacto de
+              las restricciones de movilidad en nuestro país.
+          </p>
+
+          <hr>
+          <h2>Ayudas</h2>
+          <p>
+              En la carpeta comprimida (.zip) que descargaste al principio de esta página encontrarás los códigos para comenzar con el proyecto. Esta carpeta
+              contiene un script y cuatro archivos <code class="mc">.csv</code> con los que realizarás tu proyecto. En esta ocasión no hay <code class="mc">Ayudas.py</code>
+              ya que no requieres funciones extra para lograr este proyecto.
+          </p>
+          <h4><code class="mc">GoogleMobility.csv</code></h4>
+          <p>
+              Este archivo contiene los datos de movilidad ofrecidos por la compañía Google LLC de Estados Unidos de América. Contiene las siguientes columnas de datos:
+          </p>
+          <ul>
+              <li><code class="mc">country_region_code</code> que es un código de dos letras, único para cada país.</li>
+              <li><code class="mc">country_region</code> el nombre del país (en inglés).</li>
+              <li><code class="mc">sub_region_1</code> nombre del estado.</li>
+              <li><code class="mc">sub_region_2</code> nombre de la ciudad (si aplica).</li>
+              <li><code class="mc">metro_area</code> sección del metro de la región (si aplica).</li>
+              <li><code class="mc">iso_3166_2_code</code> código de la región en norma ISO (si aplica).</li>
+              <li><code class="mc">census_fips_code</code> código FIPS de la región (si aplica).</li>
+              <li><code class="mc">date</code> fecha del registro.</li>
+              <li><code class="mc">retail_and_recreation_percent_change_from_baseline</code> muestra los cambios de tendencia en visitas a lugares como restaurantes, centros comerciales,
+              museos, librerías, cines, entre otras tiendas y lugares de ocio.</li>
+              <li><code class="mc">grocery_and_pharmacy_percent_change_from_baseline</code> muestra los cambios de tendencia en visitas a supermercados, almacenes de comida, farmacias, mercados,
+              entre otros lugares relacionados con alimentos.</li>
+              <li><code class="mc">parks_percent_change_from_baseline</code> muestra los cambios de tendencia en visitas a parques, puertos, plazas, playas y otros lugares de acceso público.</li>
+              <li><code class="mc">transit_stations_percent_change_from_baseline</code> muestra los cambios de tendencia en visitas a estaciones de transporte público como autobuses, metro, tren
+              entre otras.</li>
+              <li><code class="mc">workplaces_percent_change_from_baseline</code> muestra los cambios de tendencia en visitas a lugares de trabajo como oficinas, centros de convenciones y demás.</li>
+              <li><code class="mc">residential_percent_change_from_baseline</code> muestra los cambios de tendencia en permanencia de la población en zonas habitacionales.</li>
+          </ul>
+          <p>
+              Y luce algo similar a lo siguiente:
+          </p>
+          <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead class="thead-dark">
+                      <tr>
+                          <th>country_region_code</th>
+                          <th>country_region</th>
+                          <th>sub_region_1</th>
+                          <th>sub_region_2</th>
+                          <th>metro_area</th>
+                          <th>iso_3166_2_code</th>
+                          <th>census_fips_code</th>
+                          <th>date</th>
+                          <th>retail_and_recreation_percent_change_from_baseline</th>
+                          <th>grocery_and_pharmacy_percent_change_from_baseline</th>
+                          <th>parks_percent_change_from_baseline</th>
+                          <th>transit_stations_percent_change_from_baseline</th>
+                          <th>workplaces_percent_change_from_baseline</th>
+                          <th>residential_percent_change_from_baseline</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>MX</td><td>Mexico</td><td></td><td></td><td></td><td></td><td></td>
+                          <td>08/03/2020</td><td>3</td><td>3</td>
+                          <td>10</td><td>4</td><td>3</td><td>0</td>
+                      </tr>
+                      <tr>
+                          <td>MX</td><td>Mexico</td><td></td><td></td><td></td><td></td><td></td>
+                          <td>09/03/2020</td><td>-11</td><td>-6</td>
+                          <td>-8</td><td>-17</td><td>-16</td><td>7</td>
+                      </tr>
+                      <tr>
+                          <td>MX</td><td>Mexico</td><td></td><td></td><td></td><td></td><td></td>
+                          <td>10/03/2020</td><td>-2</td><td>0</td>
+                          <td>2</td><td>3</td><td>9</td><td>-2</td>
+                      </tr>
+                      <tr>
+                          <td>...</td><td>...</td><td>...</td><td></td><td>...</td><td>...</td><td>...</td>
+                          <td>...</td><td>...</td><td>...</td>
+                          <td>...</td><td>...</td><td>...</td><td>...</td>
+                      </tr>
+                      <tr>
+                          <td>MX</td><td>Mexico</td><td>Aguascalientes</td><td></td><td></td><td>MX-AGU</td><td></td>
+                          <td>26/02/2020</td><td>-7</td><td>-5</td>
+                          <td>1</td><td>-4</td><td>10</td><td>-1</td>
+                      </tr>
+                      <tr>
+                          <td>MX</td><td>Mexico</td><td>Aguascalientes</td><td></td><td></td><td>MX-AGU</td><td></td>
+                          <td>27/02/2020</td><td>0</td><td>0</td>
+                          <td>9</td><td>0</td><td>10</td><td>-2</td>
+                      </tr>
+                      <tr>
+                          <td>MX</td><td>Mexico</td><td>Aguascalientes</td><td></td><td></td><td>MX-AGU</td><td></td>
+                          <td>28/02/2020</td><td>9</td><td>10</td>
+                          <td>18</td><td>-2</td><td>2</td><td>-2</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <p>
+              Como podrás observar en la tabla de arriba, el código para México es <em>MX</em>. Igualmente es importante ver que, en las
+              primeras tres filas no hay especificada un sub-region (estado), lo cual hace referencia al país completo, mientras que en las demás
+              se especifica el estado al que pertencen los datos.
+
+          </p>
+          <h4><code class="mc">Confirmados.csv</code></h4>
+          <p>
+              Este archivo contiene los datos del Gobierno de México de casos confirmados para cada estado del país.
+              Este archivo tiene forma de matriz, donde las filas son los estados y las columnas los días. Luce algo similar a lo siguiente:
+          </p>
+          <table class="table table-striped">
+              <thead class="thead-dark">
+                  <tr>
+                      <th>cve_ent</th>
+                      <th>poblacion</th>
+                      <th>nombre</th>
+                      <th>25/05/2020</th>
+                      <th>26/05/2020</th>
+                      <th>27/05/2020</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1</td><td>1434635</td><td>AGUSCALIENTES</td>
+                      <td>39</td><td>39</td><td>36</td>
+                  </tr>
+                  <tr>
+                      <td>2</td><td>3634868</td><td>BAJA CALIFORNIA</td>
+                      <td>136</td><td>134</td><td>126</td>
+                  </tr>
+                  <tr>
+                      <td>3</td><td>804708</td><td>BAJA CALIFORNIA SUR</td>
+                      <td>16</td><td>14</td><td>22</td>
+                  </tr>
+              </tbody>
+          </table>
+          <p>
+              En esta tabla podrás notar que vienen las columnas <code class="mc">cve_ent</code> y <code class="mc">poblacion</code>,
+              además de la columna <code class="mc">nombre</code>, de ahí en adelante (hacia la derecha) las columnas se convierten en las fechas.
+              Si nos centramos en la primera fila podemos interpretar que el código de la entidad <em>AGUASCALIENTES</em> es 1, y que su población es
+              de casi millón y medio de personas. Si seguimos en esa fila podremos notar que para la fecha del 25/05/2020 se registraron 39 nuevos casos
+              confirmados, para el 26/05/2020 fueron 39 los nuevos casos registrados, y así sucesivamente.
+          </p>
+          <p>
+              Misma estrategia podemos seguir para los demás estados como <em>BAJA CALIFORNIA</em> y <em>BAJA CALIFORNIA SUR</em> y los demás. De forma
+              que podemos obtener para cada día y por cada estado el número de contagios confirmados.
+          </p>
+          <p>
+              Sin embargo habrás notado que la estructura es diferente a como están los datos de Google mostrados anteriormente. Los de Google poseen una fila
+              por fecha para cada estado, mientras que los de la tabla de arriba es una fila para cada estado y cada fecha es una columna. Esto es un problema,
+              ya que no podemos juntar los datos si tienen estructuras diferentes.
+          </p>
+          <p>
+              En ciencia de datos (data science) es usual el uso de las tablas de datos como la que presenta Google, mientras que la forma matricial utilizada por el Gobierno de
+              México es poco útil puesto que es difícil trabajar las selecciones y sub-selecciones de los datos, así como la unión de los mismos (como es nuestro caso).
+          </p>
+          <p>
+              Sin embargo, es posible transformar los datos del Gobierno de México de forma que podamos crear una tabla de datos que luzca de forma similar a como lo
+              están los datos de Google, para que posteriormente se puedan juntar y trabajar en una única tabla.
+          </p>
+          <h4><code class="mc">Negativos.csv</code></h4>
+          <p>
+              La estructura de este archivo es muy similar a la que posee <code class="mc">Confirmados.csv</code> solo que indica el número de pruebas negativas por entidad.
+          </p>
+          <h4><code class="mc">Negativos.csv</code></h4>
+          <p>
+              Similar a <code class="mc">Confirmados.csv</code> y <code class="mc">Negativos.csv</code>, este acrchivo indica el número de defunciones por entidad federativa.
+          </p>
+          <h4><code class="mc">MovilidadCuarentena.py</code></h4>
+          <p>
+              Este será tu código principal. Por ahora está vacío, te tocará implementarlo para completar el proyecto.
+          </p>
+
+          <hr>
+          <h2>Especificación</h2>
+          <p>
+              Para lograr este proyecto deberás de completar los siguientes pasos:
+          </p>
+          <ul>
+              <li>Leer los cuatro archivos <code class="mc">.csv</code> como DataFrames.</li>
+              <li>Seleccionar las columnas y filas que buscamos ocupar de cada DataFrame.</li>
+              <li>Para los datos del Gobierno de México vas a tener que transformarlos o crear un nuevo DataFrame donde tengan la estructura
+              de una tabla (i.e. una fila para cada fecha de cada estado).</li>
+              <li>Renombrar las columnas de los DataFrames para su mejor entendimiento.</li>
+              <li>Juntar todos los DataFrames en un único DataFrame con toda la información.</li>
+          </ul>
+          <p>
+              Considera que estos pasos no están especificados en orden de ejecución, por lo que puedes llevar a cabo uno antes o después del otro.
+          </p>
+          <div class="alert alert-info" role="alert">
+            Toma en cuenta que la unión de los DataFrames del Gobierno de México y los de movilidad de Google será mediante las columnas que contengan
+            el <strong>Nombre del estado</strong> y la <strong>Fecha</strong>. Por lo que debes de procurar que antes de juntarlos, ambas columnas en ambos DataFrames tengan
+            el mismo formato (e.g. diagonales, guiones, mayúsculas, minúsculas, acentos, etc.) de lo contario, si no son idénticos en ambos, perderás datos,
+            comportamiento que no esperamos.
+          </div>
+
+          <hr>
+          <h2>Walkthrough</h2><br>
+          <div class="container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/1ETiwXo0lg4?start=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <hr>
+          <h2>Resultados esperados</h2>
+          <p>
+              Al ejecutar tu programa, al final del mismo debe de haber un único DataFrame que tenga las siguientes columnas:
+          </p>
+          <ul>
+              <li><code class="mc">Estado</code> que contenga el nombre del estado al que corresponden los datos de la fila.</li>
+              <li><code class="mc">Fecha</code> la fecha a la que corresponden los datos de la fila.</li>
+              <li><code class="mc">Confirmados</code> número de casos confirmados en la fecha y estado indicados en la fila.</li>
+              <li><code class="mc">Negativos</code> número de pruebas negativas en la fecha y estado indicados en la fila.</li>
+              <li><code class="mc">Defunciones</code> defunciones registradas en la fecha y estado indicados en la fila.</li>
+              <li><code class="mc">Tiendas y ocio</code> cambios de tendencia en tiendas y ocio en la fecha y estado indicados.</li>
+              <li><code class="mc">Supermercados y farmacias</code> cambios de tendencia en visitas a farmacias y supermercados en la fecha y estado indicados.</li>
+              <li><code class="mc">Parques</code> cambios de tendencia en parques y zonas públicas en la fecha y estado indicados.</li>
+              <li><code class="mc">Estaciones de transporte</code> cambios de tendencia en estaciones de transporte en la fecha y estado indicados.</li>
+              <li><code class="mc">Oficinas</code> cambios de tendencia de la permanencia en oficinas durante la fecha y en el estado indicados.</li>
+              <li><code class="mc">Hogares</code> cambios de tendencia en la estadía de la gente en sus hogares durante la fecha y el estado indicados.</li>
+          </ul>
+          <p>
+              Tu código también derberá ser capaz de exportar ese DataFrame como un nuevo archivo <code class="mc">.csv</code>. Cuando lo logres,
+              habrás terminado este proyecto y tendrás lista una parte del material del siguiente.<br> <br>
+          </p>
+        </main>
+        <footer> <br>
+          <div class="text-center">
+          <p>
+            Curso impartido por la <a target="_blank" class="text-dark" href="http://www.enesjuriquilla.unam.mx/">ENES Juriquilla</a>.
+          </p>
+        </div>
+        </footer>
+
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+        <script>w3CodeColor();</script>
+    </body>
+</html>

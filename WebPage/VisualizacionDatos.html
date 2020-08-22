@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Curso Introducción a Python</title>
+    <link href="static/icono.ico" rel="icon">
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="script" href="static/script.js">
+    <!-- Boostrap code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Sidebar nice display -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Python code highlight -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <aside class="sidebar">
+          <h2><a class="title" href="index.html">Introducción al Análisis y Visualización de Datos en Python</a></h2>
+          <hr>
+
+          <a href="index.html">Introducción al curso</a>
+          <button class="dropdown-btn"> Introducción a Python
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <a href="IntroPython.html">Ejercicios en clase</a>
+              <a href="ProyectoIntro.html">Proyecto final</a>
+              <a href="#">Mini Proyectos</a>
+          </div>
+          <button class="dropdown-btn"> Almacenamiento de Datos
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <a href="AlmacenamientoDatos.html">Ejercicios en clase</a>
+              <a href="ProyectoAlmacenamientoDatos.html">Proyecto final</a>
+              <a href="#">Mini Proyectos</a>
+          </div>
+          <button class="dropdown-btn"> Manipulación de Datos
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <a href="ManipulacionDatos.html">Ejercicios en clase</a>
+              <a href="ProyectoManipulacionDatos.html">Proyecto final</a>
+              <a href="#">Mini Proyectos</a>
+          </div>
+          <button class="dropdown-btn selected"> Matemáticas Simbólicas y Visualización de Datos
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <a class="selected" href="#">Ejercicios en clase</a>
+              <a href="ProyectoVisualizacionDatos.html">Proyecto final</a>
+              <a href="#">Mini Proyectos</a>
+          </div>
+          <button class="dropdown-btn"> Inteligencia Artificial
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <a href="InteligenciaArtificial.html">Ejercicios en clase</a>
+              <a href="ProyectoInteligenciaArtificial.html">Proyecto final</a>
+              <a href="#">Mini Proyectos</a>
+          </div>
+          <a href="Additional.html">Recursos adicionales</a>
+          <a href="About.html">Sobre este curso</a>
+
+          <hr>
+          <h3>Impartido por:</h3>
+          <ul>
+            <li>Dr. Ulises Olivares</li>
+            <li>Walter Rosales</li>
+          </ul>
+          <hr>
+          <img src="static/logo.png" class="menu-image" alt="ENES logo">
+          <img src="static/UNAM.png" class="menu-image" alt="UNAM logo">
+        </aside>
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              console.log(dropdownContent.innerHTML);
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+              });
+            }
+        </script>
+
+        <main>
+          <h1 class="title">Matemáticas Simbólicas y Visualización de Datos</h1>
+
+          <hr><br>
+          <h2>Temas en esta lección</h2>
+          <ul class="custom-list">
+              <li>Manipulaciones algebraicas</li>
+              <li>Cálculo
+                  <ul>
+                      <li>Expansión de series</li>
+                      <li>Diferenciación</li>
+                      <li>Integración</li>
+                  </ul>
+              </li>
+              <li>Resolución de ecuaciones algebraicas</li>
+              <li>¿Cómo elegir un gráfico adecuado?</li>
+              <li>Matplotlib
+                  <ul>
+                      <li>Gráficos simples</li>
+                      <li>Personalización de gráficos</li>
+                  </ul>
+              </li>
+          </ul>
+
+          <hr><br>
+          <h2>Recursos visuales</h2>
+          <!-- <div class="container"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/1ETiwXo0lg4?start=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div> -->
+          <p>Disponble el 27 de agosto de 2020.</p>
+          <hr><br>
+          <h2>Descarga de los recursos ocupados durante la clase</h2>
+          <!-- <button class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; ">Descargar arhivos</button> -->
+          <p>Disponible el 27 de agosto de 2020.</p>
+          <br><br>
+        </main>
+        <footer> <br>
+          <div class="text-center">
+          <p>
+            Curso impartido por la <a target="_blank" class="text-dark" href="http://www.enesjuriquilla.unam.mx/">ENES Juriquilla</a>.
+          </p>
+        </div>
+        </footer>
+
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+        <script>w3CodeColor();</script>
+    </body>
+</html>
+
+
+{% block nav %}
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block index %}
+
+{% endblock %}
+
+{% block video %}
+
+{% endblock %}
+
+{%block resources %}
+
+{% endblock %}

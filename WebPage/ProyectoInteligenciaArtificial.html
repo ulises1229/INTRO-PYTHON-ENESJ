@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Curso Introducción a Python</title>
+    <link href="static/icono.ico" rel="icon">
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="script" href="static/script.js">
+    <!-- Boostrap code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Sidebar nice display -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Python code highlight -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Math equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+    </head>
+    <body>
+        <aside class="sidebar">
+          <h2><a class="title" href="index.html">Introducción al Análisis y Visualización de Datos en Python</a></h2>
+          <hr>
+
+          <a href="index.html">Introducción al curso</a>
+            <button class="dropdown-btn"> Introducción a Python
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="IntroPython.html">Ejercicios en clase</a>
+                <a href="ProyectoIntro.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Almacenamiento de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="AlmacenamientoDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoAlmacenamientoDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Manipulación de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="ManipulacionDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoManipulacionDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn"> Matemáticas Simbólicas y Visualización de Datos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="VisualizacionDatos.html">Ejercicios en clase</a>
+                <a href="ProyectoVisualizacionDatos.html">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <button class="dropdown-btn selected"> Inteligencia Artificial
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="InteligenciaArtificial.html">Ejercicios en clase</a>
+                <a class="selected" href="#">Proyecto final</a>
+                <a href="#">Mini Proyectos?</a>
+            </div>
+            <a href="Additional.html">Recursos adicionales</a>
+            <a href="About.html">Sobre este curso</a>
+
+          <hr>
+          <h3>Impartido por:</h3>
+          <ul>
+            <li>Dr. Ulises Olivares</li>
+            <li>Walter Rosales</li>
+          </ul>
+          <hr>
+          <img src="static/logo.png" class="menu-image" alt="ENES logo">
+          <img src="static/UNAM.png" class="menu-image" alt="UNAM logo">
+        </aside>
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              console.log(dropdownContent.innerHTML);
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+              });
+            }
+        </script>
+
+        <main>
+          <h1 class="title">Proyecto Unidad 5: Inteligencia Sanitaria</h1>
+
+          <hr>
+          <p>
+              Al finalizar el proyecto, tu código deberá de lograr crear imágenes que luzcan similares a como lucen las siguientes:
+          </p>
+          <div class="row">
+            <div class="col"><img src="static/resources/DNN0.png" class="menu-image" style="width: 80%;" alt="Initial train performance"></div>
+            <div class="col"><img src="static/resources/DNNend.png" class="menu-image" style="width: 80%;" alt="End train performance"></div>
+          </div>
+          <img src="static/resources/DNNTest.png" class="menu-image" style="width: 40%;" alt="Test performance">
+
+          <hr><br>
+          <h2>Código Inicial</h2>
+          <p>Descarga los archivos necesarios para comenzar este proyecto.</p>
+          <a href="static/Proyecto5.zip" class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; " download>Descargar archivos</a>
+
+          <hr>
+          <h2>Inspiración</h2>
+          <p>
+              El mayor temor sobre la actual pandemia del COVID-19 es la imposibilidad de atender a todos los contagiados y que por tanto la tasa de defunción
+              incremente de una forma incontrolable. Sin embargo, hay ocasiones en que un paciente requiere mayores cuidados que otros, el primero tiene un cierto
+              conjunto de características que lo hacen menos propenso a entrar a un estado de gravedad, lo que aumenta de forma considerable la probabilidad de
+              supervivencia a la infección. Sin embargo este conjunto de características no siempre es del todo obvio, ya que las tendencias no parecen siempre
+              apuntar en una única dirección, sino en varias. Por ejemplo: si un paciente de COVID-19 posee diabetes la probabilidad de complicación aumentan
+              de forma considerable, pero si cuenta con hipertensión esa probabilidad de complicación incrementa aún más. La cuestión es, y si, por una desafortunada
+              coincidencia presenta las dos, ¿qué pasa ahora con su situación? ¿La consideramos peor todavía? Ahora bien, qué sucede si ese paciente tiene 20 años, ¿tendrá
+              la misma respuesta que si posee 60?
+          </p>
+          <p>
+              Esta información, y tal vez más se puede extraer de los datos, la cuestión es cómo. Una respuesta actualmente válida y bastante potente sería construir un modelo
+              de inteligencia artificial que ayude con esta tarea. Bien, eso es lo que vas a hacer en este proyecto.
+          </p>
+          <p>
+              El área de inteligencia artificial en ciencias de la computación es actualmente algo extremadamente grande. Tanto que no nos será posible darte demasiada información
+              al respecto. Para que te puedas dar una idea observa la siguiente figura que abarca algunas de las subdivisiones más comúnes de la inteligencia artificial a lo largo del tiempo
+              tomada del <a  target="_blank" class="text-info" href="https://blogs.nvidia.com/blog/2016/07/29/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/">blog de inteligencia artificial de la compañía de tarjetas gráficas NVIDIA</a>
+              <img class="menu-image" src="https://blogs.nvidia.com/wp-content/uploads/2016/07/Deep_Learning_Icons_R5_PNG.jpg.png" alt="NVIDIA AI">
+          </p>
+          <p>
+              Los algoritmos más conocidos y que actualmente están transformando el mundo son los de <a class="text-info" href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a>,
+              dentro de los cuales se encuentran las <a class="text-info" href="https://en.wikipedia.org/wiki/Deep_learning#Deep_neural_networks">redes neuronales profundas (DNN, siglas en
+              inglés de Deep Neural Network)</a>. Sin embargo no son las únicas pero sí de las más prometedoras y que mejores resultados han dado actualmente.
+          </p>
+          <p>
+              Una parte esencial que ha hecho tan poderosas las DNN es la cantidad masiva de datos con los que se cuentan, esto permite ajustar de forma cada vez más fina y precisa estos algoritmos y logren las tareas de forma impresionantemente precisa.
+          </p>
+          <p>
+              Construir un modelo de Deep Learning, en particular de DNN requiere de cuatro componentes esenciales:
+          </p>
+          <ul class="custom-list">
+              <li>Datos</li>
+              <li>Arquitectura</li>
+              <li>Función de pérdida</li>
+              <li>Optimizador</li>
+          </ul>
+          <p>
+              Los datos, como ya hemos mencionado, en la mayoría de las ocasiones es necesario que sean masivos. Pero OJO, no siempre más es mejor; hay que encontrar un balance idóneo.
+              La arquitectura podríamos definirla como el algoritmo que vamos a tratar de ajustar para que nos de cada vez mejores resultados.
+              La función de pérdida es la manera en que vamos a evaluar a nuestro algoritmo si lo está haciendo bien o no.
+              Por último tenemos el optimizador, que va a ser ese artefacto especial que nos ayude a modificar el algoritmo dependiendo de su desempeño.
+          </p>
+          <p>
+              Una parte esencial en Deep Learning es el entrenamiento de la arquitectura o algoritmo. Esto es porque pertenece a la categoría de
+              <a class="text-info" href="https://en.wikipedia.org/wiki/Supervised_learning#:~:text=Supervised%20learning%20is%20the%20machine,a%20set%20of%20training%20examples.">supervised learning</a> o aprendizaje supervisado.
+              Esto quiere decir que los datos con los que vamos a entrenar tienen una clasificación. Por ejemplo, si vamos a entrenar en un conjunto de imágenes, cada imagen utilizada para entrenar debe de tener su correpsondiente
+              descripción de lo que se espera que responda el modelo, por ejemplo si se le pasa la foto de un gato, también se le debe de indicar al modelo que esa foto pertenece a un gato, de forma que pueda ir encontrando caracaterísticas
+              entre todas las fotos de gatos y posteriormente sea capaz de reconocer uno sin haberlo visto antes.
+          </p>
+          <p>
+              Este es el principio de las DNN, entrenas el modelo con datos <em>etiquetados</em> con sus respectivas respuestas varias veces con la intención de que aprenda a identificar características que lo hacen único y se repitan en
+              otros casos que nunca ha visto.
+          </p>
+          <p>
+              Una ejemplificación gráfica sobre cómo luce una DNN es la siguiente
+              <img class="menu-image" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Neural_network_bottleneck_achitecture.svg" alt="DNN">
+              donde los nodos indicados con el número 1 y en color amarillo hacen referencia a las entradas (cantidad de información que se le va a pasar al modelo para hacer su predicción). Posteriormente están las de color azul marcadas con el número 2,
+              éstas son actualmente las capas <em>ocultas</em>, en cada una de ellas llegan los datos y se les aplican funciones no lineales (usualmente llamadas funciones de activación) que transforman los datos de forma que el algoritmo los pueda analizar
+              e interpretar. Finalmente los nodos con número 3 en color naranja son las salidas del modelo, las predicciones que llevó a cabo. Cada uno de estos niveles marcados con un número de salida se conoce como capas. Las DNN tienen una capa de entrada y una de salida
+              pero pueden tener tantas capas intermedias (ocultas) como se requiera y desee.
+          </p>
+          <p>
+              Pongamos un ejemplo, queremos entrenar un modelo que nos ayude a calcular el valor de una casa. Para ello vamos a tener que darle información sobre la casa, datos como:
+          </p>
+          <ul>
+              <li>Metros cuadrados de construcción</li>
+              <li>Ubicación</li>
+              <li>Número de recámaras</li>
+              <li>Número de baños</li>
+          </ul>
+          <p>
+              Podríamos poner muchas más características, pero para fines explicativos esas cuatro son suficientes. Ahora bien, dada la información y el problema, una parte de nuestra arquitectura ya debe de estar definida, en particular la capa de entrada y la de salida.
+          </p>
+          <p>
+              Para nuestra capa de entrada es evidente que vamos a necesitar cuatro nodos ya que vamos a pasarle al modelo cuatro datos por casa. Mientras que, como únicamente buscamos que calcule el precio, nuestra capa de salida será de únicamente un nodo, el cual esperamos sea
+              el precio predicho por el modelo. Con esta información nuestra arquitectura quedaría similar a lo siguiente
+          </p>
+          <img class="menu-image" src="static/resources/DNN.png" alt="DNN Model">
+          <p>
+              donde cada uno de los nodos amarillos será uno de los cuatro datos de información sobre las casa (metros cuadrados, ubicación, etc.), y el nodo naranja representa la única salida que tendrá el modelo, que será la predicción del precio de la casa. Toda la sección
+              intermedia podrá tener tantas capas y nodos como uno desee, no hay restricción para ello.
+          </p>
+          <p>
+              Una vez construida la arquitectura de la red y contando con los datos, se construye la función de pérdida y se selecciona un optimizador, el paso siguiente será el entrenamiento y la evaluación del modelo.
+          </p>
+          <p>
+              La forma más usual de evaluar y entrenar es a través de crear dos sets de datos, dividiendo el conjunto total de datos en dos partes:
+          </p>
+          <ul class="custom-list">
+              <li>Datos de entrenamiento (set de train)</li>
+              <li>Datos de prueba (set de test)</li>
+          </ul>
+          <p>
+              Las proporciones que estos deben de tener son también arbitrarias, y generalmente se hacen varias pruebas para encontrar la mejor combinación. Los datos de train se ocupan para entrenar la red y tratar de que ajuste estos datos de la mejor manera, estos datos pasan varias veces
+              por el modelo, buscando que con cada ocasión que pasan mejore la predicción. A este número de ocasiones que se entrena la red se conoce como épocas (<em>epochs</em> en inglés).
+          </p>
+          <p>
+              El set de test sirve para evaluar la capacidad de la red de generalizar el fenómeno para el que se entrenó. Esto quiere decir que, después de haber entrenado la red todas las épocas, se hacen las predicciones sobre los datos de test, los resultados nos dirán qué tan buen rendimiento
+              tiene el modelo en datos que <em>jamás había visto</em> (i.e. no fue entrenado con ellos). Este resultado es de suma importancia ya que nos indica si la red realmente <em>aprendió</em> o no.
+          </p>
+
+          <hr>
+          <h2>Proyecto</h2>
+          <p>
+              Para este proyecto desarrollarás un modelo de DNN que ayude a predecir la posbilidad de supervivencia de un infectado por COVID-19 en México. Para ello hemos construido un dataset con
+              información brindada por el Gobierno de México donde se describen algunas características de cada uno de los pacientes en nuestro país.
+          </p>
+          <p>
+              Utilizando estos datos construirás y entrenarás un modelo de Deep Learning que tome todos los datos del paciente y como resultado dé una probabilida de supervivivencia del paciente. Esto quiere decir
+              que tu red deberá de contar con el mismo número de características del paciente que nodos de entrada, y también contará con un único nodo de salida, el cual deberá de tener un valor entre 0 y 1.
+          </p>
+          <p>
+              Este modelo podrá ayudar por ejemplo para identificar los casos de mayor riesgo y que el servicio de salud preste una atrnción preventiva efectiva que logre reducir lo más posible las complicaciones del paciente.
+          </p>
+
+          <hr>
+          <h2>Ayudas</h2>
+          <p>
+              Para este proyecto en la carpeta comprimida (.zip) que descargaste al principio de la página contiene dos archivos, uno de datos y un script donde harás tu proyecto.
+          </p>
+          <h4><code class="mc">COVID19MEXICOsmall.csv</code></h4>
+          <p>
+              Este archivo <code class="mc">csv</code> contiene algunos de los datos de casos de COVID-19 en México. Cuenta con las siguientes columnas para cada paciente:
+          </p>
+          <ul>
+              <li><code class="mc">SEXO</code> 1 si es mujer, 2 si es hombre.</li>
+              <li><code class="mc">ENTIDAD_RES</code> contiene el código con el que se identifica el estado donde vive.</li>
+              <li><code class="mc">TIPO_PACIENTE</code> 1 si es ambulatorio o 2 si está hospitalizado.</li>
+              <li><code class="mc">INTUBADO</code> 1 si está intubado, 0 si no lo está.</li>
+              <li><code class="mc">NEUMONIA</code> 1 si padece neumonia, 0 si no.</li>
+              <li><code class="mc">EDAD</code> edad al momento del contagio en años</li>
+              <li><code class="mc">DIABETES</code> 1 si padece diabetes, 0 de lo contrario.</li>
+              <li><code class="mc">EPOC</code> 1 si padece epoc, 0 si no.</li>
+              <li><code class="mc">ASMA</code> 1 si padece asma, 0 si no.</li>
+              <li><code class="mc">INMUNOSUPR</code> 1 si padece de inmunosupersión, 0 si no.</li>
+              <li><code class="mc">HIPERTENSION</code> 1 si padece hipertensión, 0 si no.</li>
+              <li><code class="mc">OTRA_COM</code> 1 si padece de alguna otra complicación que no haya sido mencionada, de lo contario 0.</li>
+              <li><code class="mc">CARDIOVASCULAR</code> 1 si padece alguna afectación cardiovascular además de la hipertensión, 0 si no.</li>
+              <li><code class="mc">OBESIDAD</code> 1 si padece de obesidad, 0 si no.</li>
+              <li><code class="mc">RENAL_CRONICA</code> 1 si padece alguna enfermdad renal crónica, 0 si no.</li>
+              <li><code class="mc">TABQUISMO</code> 1 si padece tabaquismo, 0 si no.</li>
+              <li><code class="mc">UCI</code> 1 si estuvo internado en la Unidad de Cuidados Intensivos, 0 si no.</li>
+              <li><code class="mc">DEF</code>1 si el paciente falleció, 0 si superó la infección.</li>
+          </ul>
+          <p>
+              De las columnas anteriores, nuestro modelo tomará como entradas todas las columnas excpeto <code class="mc">DEF</code>, la cual será nuestra variable a predecir. De forma que nuestro modelo tendrá como entrada
+              17 datos de cada paciente, y tendrá que buscar predecir la probabiliad de superar la infección.
+          </p>
+          <h4><code class="mc">InteligenciaSanitaria.py</code></h4>
+          <p>
+              este código será el principal para el proyecto. En él haremos toda la implementación de una DNN. Podemos dividir dicha implementación en cuatro grandes secciones:
+          </p>
+          <h3>Preparación de datos</h3>
+          <p>
+              En esta sección se hace la lectura y preparación de los datos para ser utilizados. La lectura se hace desde el archivo <code class="mc">csv</code> que se guarda en un DataFrame de pandas.
+          </p>
+          <p>
+              Una vez que tenemos nuestros datos cargados, los dividimos en set de train y set de test. Hemos hecho esta división 70% train, 30% test; pero puedes cambiarlo cuando gustes. Ya que están dividos los datos
+              los separamos en dos conjuntos (tensores, que son las estructuras de datos con las que trabaja PyTorch) cada set. El denominado <code class="mc">entradasTrain</code> contendrá las 17 columnas que utilizaremos como entradas para la red,
+              mientras que en el tensor <code class="mc">objetivoTrain</code> que contendrá las respuestas esperadas por parte de la red y que corresponden con la columna <code class="mc">DEF</code> de los datos. Caso similar se aplica para los daotos del
+              set de test en los tensores <code class="mc">entradasTest</code> y <code class="mc">objetivoTest</code>, para las entradas y sus respectivos objetivos respectivamente.
+          </p>
+          <p>
+              Eso es todo para la preparación de datos. Con eso terminamos con cuatro tensores, dos de ellos del set de train y los otros dos del set de test. Los primeros los utilizaremos para entrenar nuestra red, los segundos para evaluarla.
+          </p>
+          <h3>Definición del modelo</h3>
+          <p>
+              Esta sección tiene la definición de la arquitectura, de la función de pérdida y del optimizador.
+          </p>
+          <p>
+              Para el caso de la arquitectura, la forma de hacerlo es definiendo una clase derivada del módulo de PyTorch; o en otras palabras, creamos una red como si fuera una función, pero que puede tener funciones en ella también.
+          </p>
+          <p>
+              Hemos hecho para ti la estructura básica de la clase, y luce algo como lo siguiente:
+          </p>
+          <div class="w3-panel w3-card w3-light-grey pythonHigh notranslate">
+      <pre>
+class Red(nn.Module):
+  def __init__(self):
+      super(Red, self).__init__()
+       TODO
+      self.sigmoid = nn.Sigmoid()
+
+  def forward(self, x):
+      # TODO
+      </pre>
+          </div>
+          <p>
+              La definición de la función cambió ligeramente y ahora es <code class="mc">class Red(nn.Module)</code>, donde en lugar de ser una función definimos una clase, por eso la palabra reservada <code class="mc">class</code>.
+              Lo demás es como ya lo conocías, el nombre de la clase es <code class="mc">Red</code>, y va a ocupar el módulo <code class="mc">nn.Module</code> de PyTorch.
+          </p>
+          <p>
+              Después vienen dos funciones dentro de la clase. <code class="mc">__init__</code> es aquella donde se inicializa la clase. Específicamente, donde se deberá de especificar qué herramientas se van a ocupar en el modelo. Por ejemplo,
+              ya hemos definido la función <code class="mc">self.sigmoid</code> que va a tener el comportamiento de <code class="mc">nn.Sigmoid()</code> de PyTorch, pero dentro de nuestro modelo. Esta función es la
+              <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_sigmoide" class="text-info" target="_blank">función de activación sigmoide</a> que la ocupamos para obtener valores entre 0 y 1. En esta función <code class="mc">__init__</code> se
+              definen tanto funciones de activación como las capas que se van a ocupar en el modelo. Por ejemplo si quisiéramos cear una capa que entren 5 datos y salgan 3 crearíamos la siguiente función <code class="mc">self.capa1 = nn.Linear(5, 3)</code>.
+              Presta especial atención que la palabra <code class="mc">self</code> se repite en todas las definiciones, esto es porque cuando trabajamos con clases y algo que se llama <a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos" target="_blank" class="href">programación orientada a objetos</a>
+              esto hace refencia a que es un elemento de esa clase, como si le perteneciera. Igualmenente cuando quieras utilizar alguna de esas funciones deberás de ocupar <code class="mc">self</code> para indicar que intentas utilizar lo que está contenido en esa clase.
+          </p>
+          <p>
+              La siguiente función es <code class="mc">forward</code> que es aquella que indicará realmente la arquitectura, la forma de procesar los datos de la red. La declaración de la función luce de la forma <code class="mc">def forwad(self, x)</code>, donde podemos prestar
+              atención a lor argumentos que toma esta función. El primero es simplemente por convención y requerimiento de python que se agregue <code class="mc">self</code>, por lo que el importante será <code class="mc">x</code>. Este argumento <code class="mc">x</code> es el que
+              contiene los datos de entrada de la red. Esto quiere decir que, cuando ingrean los datos a nuestro modelo, entrar en esa variable <code class="mc">x</code>, por tanto será aquella a la que buscamos pasarla por nuestra red. En pocas palabras, <code class="mc">x</code>
+              son los datos, lo que le hagamos en la función <code class="mc">forward</code> será la arquitectura de nuestra red.
+          </p>
+          <p>
+              Hemos colocado una pequeña ayuda para tí en esta función con la línea <code class="mc">return self.sigmoid(x)</code>. Esta línea de código lo que hace es indicar que a la última capa de nuestra red, antes de convertirla en nuestra capa de salida, le vamos a aplicar la función sigmoide. Esto
+              ya que esperamos que nuestro resultado se encuentre entre los valores 0 y 1. Así como aplicamos nuestra función de activación a <code class="mc">x</code>, puedes aplicarle también capas con una sintaxis similar. Por ejemplo, si retomamos <code class="mc">self.capa1 = nn.Linear(5, 3)</code> antes descrita,
+              para aplicarla a nuestro datos simplemente tendríamos que colocar <code class="mc">self.capa1(x)</code> en la función <code class="mc">forward</code> y con eso se aplicaría la capa a los datos en <code class="mc">x</code>. Es importante que tomes en cuenta las dimensiones de tus capas,
+              si tu capa tiene de entrada 5 nodos, esperas que el tamaño de tus datos en <code class="mc">x</code> sea también de 5, y por ejemplo, al tener una salida de 3, es indispensable que la siguiente capa comience con 3 nodos, de lo contrario tendrás problemas. ¿Ya encontraste el patrón? Con lo que acaba una capa,
+              forzosamente debe de comenzar la siguiente, así hasta llegar a la capa de salida.
+          </p>
+          <p>
+              Bien, verás que en ambas funciones hemos colocado <code class="mc"># TODO</code>. Estas secciones serán las que tengas que completar para crear tu primer modelo de DNN. Toma en consideración los consejos que te damos en el párrafo anterior, ya que te serán de mucha ayuda para lograrlo.
+          </p>
+          <p>
+              Un último recordatorio antes de que comiences a diseñar tu red: tenemos 17 datos de entrada, y esperamos uno de salida, antes de aplicarle la función sigmoide.
+          </p>
+          <p>
+              Luego de completar la definición de la clase <code class="mc">Red</code>, creamos una variable de ese tipo, que hemos llamado <code class="mc">red</code> por simplicidad. Pero no te confundas, <code class="mc">Red</code> con mayúscula es la clase, como si fuera una plantilla de la cual puedes copiar tantas veces quieras
+              la arquitectura que craste. Mientras que <code class="mc">red</code> con minúscula es una copia de la plantilla; pero es esa la que vamos a entrenar.
+          </p>
+          <p>
+              Hemos tomado la función más usual y sencilla para modelos de DNN conocida como <a href="https://es.wikipedia.org/wiki/Error_cuadr%C3%A1tico_medio" target="_blank" class="text-info">MSE (error cuadrático medio en español)</a>, la cual mide la distancia euclidiana entre los puntos objetivo y las predicciones de la red.
+          </p>
+          <p>
+              También hemos definido para ti el optimizador que vamos a ocupar. Igualmente el <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent" target="_blank" class="text-info">SGD</a> es el más básico y más conocido de todos, por ello lo hemos ocupado, pero si te sientes con seguridad puedes intentar cambiarlo,
+              <a href="https://pytorch.org/docs/stable/optim.html" target="_blank" class="text-info">aquí</a> hay una lista con todos los optimizadores con los que cuenta PyTorch. Notarás que este optimizador toma dos argumentos <code class="mc">red.parameters()</code> que son el conjutno de parámetros (lo que se va a ajustar) del modelo,
+              y también con un <code class="mc">lr</code> que el el conocido como <a href="https://en.wikipedia.org/wiki/Learning_rate" target="_blank" class="text-info">learning rate</a>, con el que también puedes sentirte libre de jugar con sus valores, de hecho esta es una de las prácticas más comúnes en Deep Learning, ya que es una forma de encontrar
+              el óptimo para tu modelo.
+          </p>
+          <h3>Entrenamiento del modelo</h3>
+          <p>
+              Para entrenar la red definimos el número de épocas en la variable <code class="mc">epochs</code> que es el número de veces que se repite el ciclo de entrenamiento. En este ciclo suceden varias cosas importantes:
+          </p>
+          <ul>
+              <li>Se establecen los gradientes a cero.</li>
+              <li>Se evalúa la predicción del modelo en <code class="mc">red</code> sobre las entradas del set de train.</li>
+              <li>Se calcula la función de pérdida (error) entre la predicción de la red y los objetivos reales del set de train.</li>
+              <li>Se actualizan los parámetros de la red según la pérdida, el gradiente y el optimizador.</li>
+          </ul>
+          <p>
+              Como extra agregamos un código que creará un gráfico en la primera y la última época, donde muestre el estado de las predicciones de la red a través de un boxplot.
+          </p>
+          <h3>Evaluación del modelo</h3>
+          <p>
+              Una vez que se acabó de entrenar el modelo, podemos pasar a evaluarlo. Para esto seguimos un proceso similar al de entrenamiento, pero en esta ocasión no buscamos que se
+              actualicen los parámetros, de forma que lo hacemos dentro del comando <code class="mc">with torch.no_grad()</code> que justamente impide que se actualicen los gradientes en el cálculo
+              de las predicciones.
+          </p>
+          <p>
+              Para evaluar calculamos la predicción de la red, pero ahora sobre las entradas del set de test. Una vez que las tenemos, podemos comparar y graficar las predicciones de la red y los objetivos reales. Si el rendimiento es el esperado,
+              ¡hemos entrenado bien la red! De lo contrario tal vez sería buena idea comenzar a modificar parámetros.
+          </p>
+
+          <hr>
+          <h2>Especificación</h2>
+          <p>
+              Para llevar a cabo este proyecto deberás de completar las funciones <code class="mc">__init__</code> y <code class="mc">forward</code> de <code class="mc">InteligenciaSanitaria.py</code>.
+          </p>
+          <p>
+              Para lograrlo recuerda que, en la función <code class="mc">__init__</code> definirás tanto las funciones como las capas que ocupará tu modelo, aquí no importa el orden en que las definas.
+          </p>
+          <p>
+              En <code class="mc">forward</code> implementarás la estructura de las capas y funciones de activación de la red, mismas que tuviste que haber definido previamente en la función <code class="mc">__init__</code>.
+              Aquí sí es muy importante el orden, ya que este definirá qué operaciones se aplican primero y cuáles después. Recuerda que al final ocupamos la variable <code class="mc">x</code> para la función sigmoide, por lo que en cada operación
+              que le apliques debes de ir actualizándola.
+          </p>
+          <p>
+              Como recomendación, podrías comenzar con una arquitectura sencilla, esto quiere decir con una única capa oculta. En otras palabras, tendras 17 nodos de entrada que pasarían a un valor <em>z</em> que tú decidas de nodos, los cuales
+              en la siguiente capa se reducirían a uno, que sería la última capa antes de aplicarle la función sigmoide. De preferencia aplícale una función de activación a los resultados de cada una de las capas, esto mejora de gran manera la capacida de
+              predicción de la red. <a href="https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity" target="_blank" class="text-info">Aquí</a> puedes encontrar algunas ya implementadas en PyTorch.
+          </p>
+          <p>
+              Una vez que hayas completado ambas funciones, habrás completado tu implementación y tendrás todo listo para seguir avanzando en el código e implementar tu modelo.
+          </p>
+
+          <hr>
+          <h2>Walkthrough</h2><br>
+          <div class="container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/1ETiwXo0lg4?start=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <hr>
+          <h2>Resultados esperados</h2>
+          <p>
+              Cuando tengas listas ambas funciones en la clase <code class="mc">Red</code> podrás seguir avanzando en el código y comenzar a entrenar ¡tu primer modelo de Deep Learning en Python!
+              Al finalizar el entrenamiento se desplegrán los boxplots que hemos implementado para visualizar el rendimiento del modelo. Cuando creas que tu red ha hecho un buen trabajo en su entrenamiento, ponla a prueba
+              en la sección de evaluación.
+          </p>
+          <p>
+              Sigue jugando y modificando los parámetros, la arquitectura, la función de pérdida, el optimizadora, todo. Mientras más modifiques más aprendes.
+          </p>
+          <p>
+              Bien, recuerda que estos fueron los resultados tomando únicamente una porción de todos los datos que hay sobre la actual pandemia. Si quieres poner a prueba la capacidad de tu modelo de mejor manera, puedes descargar todos los datos disponibles aquí
+          </p>
+          <a href="static/Proyecto5Data.zip" class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; " download>Descargar todos los datos (150MB)</a>
+          <p> <br>
+              O si lo prefieres puedes encontrar esos mismo datos en el <strong>COMPLETAR AQUÍ</strong><a target="_blank" href="" class="text-info">siguiente dataset de Kaggle</a> que contiene los mismos datos. Si no ocupaste Kaggle anteriormente, tal vez
+              sea una buena opción probarlo. Puedes encontrar más información al respecto en la sección de <a href="/Additional" class="text-info">recursos adicionales</a> donde viene cómo crear un notebook en la nube y cómo agregar datos
+              en él.
+          </p>
+          <p>
+              ¡Felicidades! Completaste este proyecto, tu útlimo proyecto, con éxito. Esperamos que haya sido de tu agrado y hayas aprendido mucho. Si tienes cualquier duda o comentario no dudes en contactarnos en la sección <a href="/About" class="text-info">Sobre este curso</a>.
+          </p>
+          <p>
+              ¡Éxito y feliz programación!
+          </p>
+        </main>
+        <footer> <br>
+          <div class="text-center">
+          <p>
+            Curso impartido por la <a target="_blank" class="text-dark" href="http://www.enesjuriquilla.unam.mx/">ENES Juriquilla</a>.
+          </p>
+        </div>
+        </footer>
+
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+        <script>w3CodeColor();</script>
+    </body>
+</html>
