@@ -20,11 +20,11 @@
 
 | Día        | Tema           | Contenido  |  Material   | Videos | 
 | :------------- |:-------------:|:-----| :-----|:-----: |
-| Día 1      | Introducción al lenguaje Pytho| <ul> <li> Introducción y antecedentes R</li> <li> Entorno de programación</li> <li> Variables y tipos</li> <li>Operadores</li> <li>Instrucciones de control</li> <li>Funciones</li> <li>Librerías</li>  </ul>|  <ol><li> []()</li> <li>[]()</li> <li>[]()</li><li>[]()</li></ol> | []()|
+| Día 1      | Introducción al lenguaje Python| <ul> <li> Introducción y antecedentes R</li> <li> Entorno de programación</li> <li> Variables y tipos</li> <li>Operadores</li> <li>Instrucciones de control</li> <li>Funciones</li> <li>Librerías</li>  </ul>|  <ol><li> []()</li> <li>[]()</li> <li>[]()</li><li>[]()</li></ol> | []()|
 | Día 2      |  Almacenamiento de datos | <ul> <li> Listas </li>  <li> Numpy (Arreglos, matrices, subconjuntos, operaciones básicas) </li> <li> Diccionarios </li> <li> Agregar colores y formas a las gráficas </li> <li> Más funciones básicas de estadística descriptiva (regresiones lineales, correlaciones) </li> <li> T Test </li></ul> |  <ol><li>[]()</li> <li>[]()</li><li>[]()</li></ol>| []()|
-| Día 3      | Manipulación de datos | <ul> <li> Importación de datos CSV, TXT </li> <li> Pandas (o	DataFrames, ordenamientos, subconjuntos de filas y columnas, Unión de DataFrames)</li> <li>Estadísticos básicos </li></ul>|  <ul><li></li> <li></li></ul>  | |
-| Día 4      | Matemáticas simbólicas y visualización de datos| <ul>  <li> Manipulaciones algebraicas</li> <li> Cálculo (Expansión de series, diferenciación, integración) </li> <li> Resolución de ecuaciones algebraicas</li> <li> Cómo elegir un gráfico adecuado? </li> <li> Matplotlib (o	Gráficos simples y personalización de gráficos)</li></ul>| <ul><li></li> <li></li></ul>  | |
-| Día 5      | Python e inteligencia artificial | <ul> <li> Introducción y definiciones</li> <li> Redes neuronales</li> <li> Deep Learning con PyTorch</li></ul> |  <ul><li></li> <li></li></ul>   | |
+| Día 3      | Manipulación de datos | <ul> <li> Importación de datos CSV, TXT </li> <li> Pandas (o	DataFrames, ordenamientos, subconjuntos de filas y columnas, Unión de DataFrames)</li> <li>Estadísticos básicos </li></ul>|  <ol><li></li> <li></li></ol>  | |
+| Día 4      | Matemáticas simbólicas y visualización de datos| <ul>  <li> Manipulaciones algebraicas</li> <li> Cálculo (Expansión de series, diferenciación, integración) </li> <li> Resolución de ecuaciones algebraicas</li> <li> Cómo elegir un gráfico adecuado? </li> <li> Matplotlib (o	Gráficos simples y personalización de gráficos)</li></ul>| <ol><li></li> <li></li></ol>  | |
+| Día 5      | Python e inteligencia artificial | <ul> <li> Introducción y definiciones</li> <li> Redes neuronales</li> <li> Deep Learning con PyTorch</li></ul> |  <ol><li></li> <li></li></ol>   | |
 
 ##### Última modificación 21 de agosto de 2020
 
