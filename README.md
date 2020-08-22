@@ -6,7 +6,7 @@
 ## Fecha
 ### 31 de agosto - 04 de septiembre de 2020 
 ## Página el curso
-[Página](http://132.247.186.49/)
+[Página con código y explicación](http://132.247.186.49/)
 
 ## Prerequisitos
 <ol><li>Python versión 3.x instalado</li><li>Entorno de desarrollo integrado (cualquiera de los siguientes)<ul><li>Pycharm -https://www.jetbrains.com/es-es/pycharm/</li><li>Spyder- https://www.spyder-ide.org/<li>Jupyter - https://jupyter.org/</li></ul></li> <li>Librerías <ul><li>Numpy</li>Pandas<li>Matplotlib</li><li>Scipy</li><li>PyTorch (Opcional)</li></ul></li></ol>
