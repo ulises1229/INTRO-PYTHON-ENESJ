@@ -9,9 +9,9 @@
 [Página](http://132.247.186.49/)
 
 ## Prerequisitos
-<ol><li>Python versión 3.x instalado</li><li>Entorno de desarrollo integrado (cualquiera de los siguientes)<ul><li>[Pycharm](https://www.jetbrains.com/es-es/pycharm/)</li><li></li>[Spyder](https://www.spyder-ide.org/)<li>[Jupyter](https://jupyter.org/)</li></ul></li> <li>Librerías <ul><li>Numpy</li>Pandas<li>Matplotlib</li><li>Scipy</li><li>PyTorch (Opcional)</li><li></li></ul></li></ol>
+<ol><li>Python versión 3.x instalado</li><li>Entorno de desarrollo integrado (cualquiera de los siguientes)<ul><li>[Pycharm](https://www.jetbrains.com/es-es/pycharm/)</li><li>[Spyder](https://www.spyder-ide.org/)<li>[Jupyter](https://jupyter.org/)</li></ul></li> <li>Librerías <ul><li>Numpy</li>Pandas<li>Matplotlib</li><li>Scipy</li><li>PyTorch (Opcional)</li></ul></li></ol>
 
-[Ver video con la explicación de prerequisitos](https://www.youtube.com/watch?v=1ETiwXo0lg4&feature=emb_title)
+[Video de instalación de prerequisitos](https://www.youtube.com/watch?v=1ETiwXo0lg4&feature=emb_title)
 
 ## Impartido por:
 <ul>
