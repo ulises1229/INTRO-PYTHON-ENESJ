@@ -5,7 +5,7 @@
 
 ## Fecha
 ### 31 de agosto - 04 de septiembre de 2020 
-## Página el curso
+## Página del curso
 [Página con código y explicación](http://132.247.186.49/)
 
 ## Prerequisitos
