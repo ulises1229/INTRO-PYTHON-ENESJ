@@ -4,8 +4,7 @@
 ![alt text](figs/python.png)
 
 ## Fechas y horarios
-### 31 de agosto - 04 de septiembre de 2020
-### 09:00 - 13:00
+### 31 de agosto - 04 de septiembre de 2020 de 09:00 a 13:00 horas.
 ## Página del curso
 [Página con código y explicación](http://132.247.186.49/)
 
