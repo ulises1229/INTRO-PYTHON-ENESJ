@@ -26,7 +26,7 @@ body {
   color: black;
   text-decoration: none;
   padding: 10px 8px 6px 16px;
-  font-size: 20px;
+  font-size: 17px;
   border: none;
   background: none;
   width: 100%;
@@ -46,7 +46,8 @@ body {
 
 .sidebar h2 .title {
   color: black;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  text-align: center;
 }
 
 .sidebar h2 .title:hover {
@@ -124,7 +125,7 @@ main {
 }
 
 .menu-image {
-    width:60%;
+    width:80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -198,4 +199,8 @@ footer {
 .text{
   text-align:justify; 
   line-height:30px;
+}
+
+.mail-side{
+  font-size: 15px;
 }
