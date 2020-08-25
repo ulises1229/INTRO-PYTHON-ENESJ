@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Curso Introducción a Python</title>
+
     <link href="static/icono.ico" rel="icon">
     <link href="static/styles.css" rel="stylesheet">
     <link rel="script" href="static/script.js">
@@ -19,7 +20,7 @@
     </head>
     <body>
         <aside class="sidebar">
-          <h2><a class="title" href="index.html">Introducción al Análisis y Visualización de Datos en Python</a></h2>
+          <h2><a class="title" href="index.html">Introducción a Python</a></h2>
           <hr>
 
           <a class="selected" href="#">Introducción al curso</a>
@@ -70,8 +71,8 @@
           <hr>
           <h3>Impartido por:</h3>
           <ul>
-            <li>Dr. Ulises Olivares</li>
-            <li>Walter Rosales</li>
+            <li>Dr. Ulises Olivares Pinto</li>
+            <li>Walter André Rosales Reyes</li>
           </ul>
           <hr>
           <img src="static/logo.png" class="menu-image" alt="ENES logo">
@@ -98,31 +99,34 @@
         </script>
 
         <main>
-        <h1 class="title">Introducción al curso</h1>
+        <h1 class="title">Introducción al Análisis y Visualización de Datos en Python</h1>
+        <hr>
+        <img src="static/header.png" width="75%" class = center >
+        <img src="static/python.png" width="70%" class = center >
             <hr>
 
-            <h2>Hola mundo</h2>
-            <p style = "text-align:justify" >
+            <h2>Hola Mundo</h2>
+            <p class = text >
                 ¡Hola! En este curso aprenderás a utilizar algunas herramientas que podrían ayudarte a lo largo de tu desempeño académico y/o personal. A través del uso de uno de los lenguajes de programación más populares y versátiles de nuestra época "Python" <a class="text-info" target="_blank" href="https://octoverse.github.com/#top-languages"> (referencia original)</a>.
             </p>
-            <p style = "text-align:justify">
-                Este curso te será de utilidad si es la primera vez que tienes acercamiento con un lenguaje de programación, ya que se abordaran los conceptos básicos de programación. Si consideras que tienes experiencia en programación con otros lenguajes, entonces este curso podría ser de utilidad para explorar el uso de herramientas y librerías que extienden la funcionalidad de Python de forma gratuita <a class="text-info" target="_blank" href="https://es.wikipedia.org/wiki/C%C3%B3digo_abierto"> (Open Source)</a> (Código abierto
+            <p class = text>
+                Este curso te será de utilidad si es la primera vez que tienes acercamiento con un lenguaje de programación, ya que se abordaran los conceptos básicos de programación. Si consideras que tienes experiencia en programación con otros lenguajes, entonces este curso podría ser de utilidad para explorar el uso de herramientas y librerías que extienden la funcionalidad de Python de forma gratuita <a class="text-info" target="_blank" href="https://es.wikipedia.org/wiki/C%C3%B3digo_abierto"> (Código abierto)</a> 
             </p>
-            <p style = "text-align:justify">
+            <p class = text>
                 No importa el nivel de experiencia previa que poseas en programación, este curso te ayudará a aprender herramientas útiles para
                 una cada vez más grande variedad de aplicaciones que van desde simulaciones básicas, pasando por aplicaciones en ciencia de
                 datos (data science) hasta los famosos modelos de inteligencia artificial más utilizados actualmente tanto en la comunidad
                 científica como en la industria.
-            </p>
+            </p >
 
             <hr>
             <h2>Requisitos</h2>
-            <p>
-                Para poder realizar las actividades y ejercicios del curso te recomandamos contar con lo siguiente:
+            <p class = text>
+                Para realizar las actividades y ejercicios del curso te recomandamos contar con lo siguiente:
             </p>
             <ul class="custom-list">
                 <li>Python versión 3.x instalado</li>
-                <li>Un IDE de tu agrado para trabajar con Python</li>
+                <li>Un Entorno de Desarrollo Integrado (IDE) de tu agrado para trabajar con Python</li>
                 <li>Las siguientes librerías instaladas:
                   <ul>
                       <li>Numpy</li>
@@ -146,8 +150,8 @@
             <h2>Proceso de instalación</h2>
             <br>
             <h4>Verificar arquitectura de tu dispositivo</h4>
-            <p>
-                Para poder llevar a cabo las prácticas de Inteligencia Artifical en tu computadora es necesario que cuentes con
+            <p class="text">
+                Para llevar a cabo las prácticas de Inteligencia Artifical en tu computadora es necesario que cuentes con
                 un equipo que soporte una arquitectura de 64-bits, de lo contrario no podrás instalar los paquetes necesarios.
                 Si no sabes qué arquitectura tiene tu dipositivo puedes seguir el siguiente procedimiento dependiendo de tu sistema operativo:
             </p>
@@ -164,7 +168,7 @@
 
                     <div id="collapseOneA" class="collapse" aria-labelledby="headingOneA" data-parent="#accordionArch">
                       <div class="card-body">
-                        <p>
+                        <p class="text">
                             Abre una terminal o línea de comandos (busca <em>Símbolo del sistema</em> en tus aplicaciones).
                             Escribe el comando <code class="mc">systeminfo</code>, cuando se despliegue la información de tu computadora busca el apartado
                             que dice <em>Tipo de sistema</em> a un costado te aparecerá si tu computadora tiene una arquitectura de 64-bits (<em>x64</em>) o de 32-bits.
@@ -182,10 +186,12 @@
                     </div>
                     <div id="collapseTwoA" class="collapse" aria-labelledby="headingTwoA" data-parent="#accordionArch">
                       <div class="card-body">
-                        En el menú Apple (<em>esquina superior izquierda</em>) selecciona <em>Acerca de esta Mac</em>. Posteriormente en el cuadro
+                        <p class="text">
+                          En el menú Apple (<em>esquina superior izquierda</em>) selecciona <em>Acerca de esta Mac</em>. Posteriormente en el cuadro
                         que te aparece con información de tu sistema, selecciona <em>Reporte del sistema</em>. En la ventana que aparece busca en el menú
                         el apartado de <em>Software</em> y luego en <em>Aplicaciones</em>. Te aparecerá un apartado en el lado derecho con la información
                         de tu dispositivo, ahí se especifica si es de 64-bits o de 32-bits.
+                      </p>
                       </div>
                     </div>
                   </div>
@@ -199,28 +205,34 @@
                     </div>
                     <div id="collapseThreeA" class="collapse" aria-labelledby="headingThreeA" data-parent="#accordionArch">
                       <div class="card-body">
-                        Abre una terminal y escribe el comando <code class="mc">lscpu</code>. En la información desplegada busca el apartado <em>Architecture</em> donde indica
-                        si tu computadora es de 64-bits (x64) o de 32-bits.
+                        <p class="text">
+                            Abre una terminal y escribe el comando <code class="mc">lscpu</code>. En la información desplegada busca el apartado <em>Architecture</em> donde indica
+                            si tu computadora es de 64-bits (x64) o de 32-bits.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div> <br>
                 <div class="alert alert-warning" role="alert">
-                  En caso de no contar con una computadora de 64-bits, por favor ponte en contacto con nosotros a través de la sección <a class="text-info" href="/About">Sobre este curso</a>
-                  para que te platiquemos sobre otra estrategia para realizar las prácticas de Inteligencia Artificial sin mayores complicaciones.
+                  <p class="text">
+                    En caso de no contar con una computadora de 64-bits, por favor ponte en contacto con nosotros a través de la sección <a class="text-info" href="About.html">Sobre este curso</a>
+                    para que te platiquemos sobre otra estrategia para realizar las prácticas de Inteligencia Artificial sin mayores complicaciones.
+                  </p>
                 </div>
 
             <br>
             <h4>Instalación de Python</h4>
             <div class="alert alert-info" role="alert">
-              Si tienes <strong>Mac OS</strong> o <strong>Linux</strong>, en muchas distribuciones de estos sistemas operativos ya viene instalado de forma predeterminada python.
-              Te recomendamos verificarlo ejecutando el comando <code class="mc">python --version</code> en una terminal, que te informará la versión instalada. En caso de que esta versión corresponda
-              con la 2 de python (e.g. 2.7.3) puedes intentar ahora con el comando <code class="mc">python3 --version</code> ya que en ocasiones vienen instaladas ambas versiones y este último
-              comando hace referencia a la versión 3.x disponible en tu dispositivo.
+              <p class="text">
+                Si tienes <strong>Mac OS</strong> o <strong>Linux</strong>, en muchas distribuciones de estos sistemas operativos ya viene instalado de forma predeterminada python.
+                Te recomendamos verificarlo ejecutando el comando <code class="mc">python --version</code> en una terminal, que te informará la versión instalada. En caso de que esta versión corresponda
+                con la 2 de python (e.g. 2.7.3) puedes intentar ahora con el comando <code class="mc">python3 --version</code> ya que en ocasiones vienen instaladas ambas versiones y este último
+                comando hace referencia a la versión 3.x disponible en tu dispositivo.
+              </p>
             </div>
-            <p>
+            <p class="text">
                 Para instalar python visita <a class="text-info" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> que es la página
-                oficial de descargas del lenguaje. Automáticamente detectará tu sistema operativo y te mostrará un botón de descarga, si quieres
+                oficial de descargas del lenguaje. Automáticamente detectará tu sistema operativo y te mostrará un botón de descarga, si deseas
                 descargar la versión de <strong>32-bits</strong> puedes dar click en ese botón y proceder con la descarga. De forma contraria, para la descarga
                 de la versión de <strong>64-bits</strong> deberás seleccionar tu sistema operativo en las opciones que aparecen debajo del botón de descarga.
                 Se te mostrarán todas las versiones disponibles de Python para el sistema operativo que hayas seleccionado, busca la versión más reciente en el grupo
@@ -240,19 +252,19 @@
 
                     <div id="collapseOneP" class="collapse" aria-labelledby="headingOneP" data-parent="#accordionExamplePyth">
                       <div class="card-body">
-                        <p>
+                        <p class="text">
                             Te recomendamos descargar el archivo marcado como <em>executable installer</em> ya que desplegará una
                             interfaz de usuario que hace más amigable el proceso de instalación.
                             Una vez finalizada la descarga abre el ejecutable. Aparecerá la venta de descarga, en esa misma ventana
-                            en la parte inferior slecciona la casilla de verificación con la leyenda <em>Add Python to PATH</em> ya que esto
-                            te permitirá correr python desde la terminar usando el comando <code class="mc">python</code>. En las opciones
-                            de instalación, te recomendamos seleccionar la opción de <em>Customize installation</em>. en la siguiente ventana dar
-                            en siguiente y en el apartado <em>Advanced Options</em> seleccionar la casilla <em>Install for all users</em> nota que
-                            al hacerlo la ubicación de la instalación cambiará, de forma que ahora todos los usuario del dispositivo tengan acceso a python.
-                            A menos que este no desees que otros usuarios tengan acceo a la instalación de python, es recomendable instalarlo de esta forma.
-                            Finalmente al dar click en <em>install</em> debería de comenzar a instalarse el programa en la ubicación especificada.
+                            en la parte inferior slecciona la casilla de verificación con la leyenda <em>Add Python to PATH</em>, ya que esto
+                            te permitirá correr python desde la terminal usando el comando <code class="mc">python</code>. En las opciones
+                            de instalación, te recomendamos seleccionar <em>Customize installation</em>. en la siguiente ventana dar
+                            click en siguiente y en el apartado <em>Advanced Options</em> seleccionar la casilla <em>Install for all users</em> nota que
+                            al hacerlo, la ubicación de la instalación cambiará, de forma que ahora todos los usuario del dispositivo tengan acceso a python.
+                            A menos que no desees que otros usuarios tengan acceo a la instalación de python, es recomendable instalarlo de esta forma.
+                            Finalmente al dar click en <em>install</em> deberá comenzar el proceso de instalación en la ubicación seleccionada.
                         </p>
-                        <p>
+                        <p class="text">
                             Una vez que termine la instalación puedes corroborar que funcione adecuadamente abriendo una línea de comandos
                             y escribir <code class="mc">python</code> y dar enter. Al hacerlo debería de mostrarte información referente a la versión
                             de python que acabas de instalar y modificarse el símbolo que aparece a la izquierda de donde está el cursor. Prueba escribiendo
@@ -265,7 +277,7 @@
                             >>>
                           </p>
                         </div>
-                        <p>
+                        <p class="text">
                             Si es así, ¡felicidades, ya tienes python corriendo correctamente en tu computadora! Para salir de python puedes cerrar la terminal o
                             escribir <code class="mc">exit()</code>.
                         </p>
@@ -282,7 +294,7 @@
                     </div>
                     <div id="collapseTwoP" class="collapse" aria-labelledby="headingTwoP" data-parent="#accordionExamplePyth">
                       <div class="card-body">
-                        <p>
+                        <p class="text">
                           Una vez finalizada la descarga abre el ejecutable. Aparecerá una interfaz de usuario que te ayudará a instalar Python. Sigue con el proceso
                           de instalación mostrado. Una vez finalizado, puedes verificar que se haya instalado python correctamente desde la terminal con el comando
                           <code class="mc">python</code> si no tenías Python 2.x ya instalado, de lo contrario ocuparás el comando <code class="mc">python3</code>.
@@ -291,13 +303,13 @@
                           <code class="mc">print("Hola Python")</code> y da enter. Debería de mostrarse algo como lo siguiente:
                         </p>
                         <div class="w3-panel w3-card w3-light-grey pythonHigh notranslate">
-                        <p> <br>
+                        <p class="text"> <br>
                           >>> print("Hola Python") <br>
                           Hola Python <br>
                           >>>
                         </p>
                         </div>
-                        <p>
+                        <p class="text">
                             Si es así, ¡felicidades, ya tienes python corriendo correctamente en tu computadora! Para salir de python puedes cerrar la terminal o
                             escribir <code class="mc">exit()</code>.
                         </p>
@@ -314,7 +326,7 @@
                     </div>
                     <div id="collapseThreeP" class="collapse" aria-labelledby="headingThreeP" data-parent="#accordionExamplePyth">
                       <div class="card-body">
-                        <p>
+                        <p class="text">
                           Si utilizas Ubuntu <strong>16.10</strong> o posteriores, puedes correr en línea de comandos lo siguiente:
                         </p>
                         <div class="w3-panel w3-card w3-light-grey pythonHigh notranslate">
@@ -334,10 +346,10 @@
                             $ sudo apt-get install python3
                           </p>
                         </div>
-                        <p>
+                        <p class="text">
                           Si tienes alguna otra distribución de Linux, tienes que utilizar el paquete instalador propio de esta.
                         </p>
-                        <p>
+                        <p class="text">
                           Una vez finalizado, puedes verificar que se haya instalado python correctamente desde la terminal con el comando
                           <code class="mc">python</code> si no tenías Python 2.x ya instalado, de lo contrario ocuparás el comando <code class="mc">python3</code>.
                           Al hacerlo debería de mostrarse algo como lo siguiente:
@@ -349,8 +361,8 @@
                           >>>
                         </p>
                         </div>
-                        <p>
-                            Si es así, ¡felicidades, ya tienes python corriendo correctamente en tu computadora! Para salir de python puedes cerrar la terminal o
+                        <p class="text">
+                            Si es así, ¡felicidades, ya tienes python instalado correctamente en tu computadora! Para salir de python puedes cerrar la terminal o
                             escribir <code class="mc">exit()</code>.
                         </p>
                     </div>
@@ -360,37 +372,39 @@
 
             <br>
             <h4>Instalación de Paquetes a través de PIP</h4>
-            <p>
-              La instalación de Python viene cargado con el servicio instalador de paquetes <em>PIP</em>, un comando que te permitirá descargar los paquetes necesarios
-              para este curso, así como muchos otros disponibles para python desde la línea de comandos.
+            <p class="text">
+              La instalación de Python cuenta con un servicio instalador de paquetes <em>PIP</em>, un comando que te permitirá descargar los paquetes necesarios
+              para este curso, así como muchos otros disponibles para python a través de la línea de comandos.
             </p>
-            <p>
+            <p class="text">
               Para comenzar puedes abrir una terminal y correr el siguiente comando <code class="mc">pip3 install --upgrade pip</code> el cual actualizará
               pip a la versión más reciente. Una vez que tengas descargada la versión más reciente, podrás continuar con las demás instalaciones de manera
               adecuada.
             </p>
             <div class="alert alert-warning" role="alert">
-              Es muy importante que ocupes el comando <code class="mc">pip3</code> en lugar de <code class="mc">pip</code> ya que vamos a trabajar con
-              la versión 3 de Python. Siempre que vayas a descargar un paquete para Python 3 recuerda utilizar <strong>pip3</strong> ya que de lo contrario podría
-              haber problemas de compatibilidad u otras dificultades indeseadas.
+              <p class="text">
+                  Es muy importante que utilices el comando <code class="mc">pip3</code> en lugar de <code class="mc">pip</code> ya que vamos a trabajar con
+                la versión 3 de Python. Siempre que vayas a descargar un paquete para Python 3 recuerda utilizar <strong>pip3</strong> ya que de lo contrario podría
+                haber problemas de compatibilidad u otras dificultades indeseadas.
+              </p>
             </div>
 
             <br>
             <h4>Instalación de Jupyter Notebook</h4>
-            <p>
+            <p class="text">
               Para instalar jupyter notebook es necesario correr los siguientes comandos en una terminal:
             </p>
             <div class="w3-panel w3-card w3-light-grey pythonHigh notranslate">
-            <p> <br>
+            <p class="text"> <br>
               pip3 install jupyter <br>
               pip3 install notebook
             </p>
             </div>
-            <p>
+            <p class="text">
               Una vez que finalicen las instalaciones podrás verificar que se haya instalado de forma correcta el Notebook ejecutando el comando <code class="mc">jupyter notebook</code> en una terminal.
               Al hacerlo se debe de desplegar la ventana inicial de Jupyter en tu navegador predeterminado.
             </p>
-            <p>
+            <p class="text">
               Puedes encontrar más información sobre jupyter y jupyter notebook en la página <a class="text-info" href="https://jupyter.org/install">https://jupyter.org/install</a> así como su respectiva documentación.
               También puedes revisar la alternativa a Jupyter Notebook llamada Jupyter Lab que es otro IDE muy similar pero que ofrece otras ventajas sobre el Notebook convencional; esa decisión la
               dejamos a tu consideración.
@@ -398,7 +412,7 @@
 
             <br>
             <h4>Instalación de paquetes</h4>
-            <p>
+            <p class="text">
               Para instalar paquetes a través de pip simplemente es necesario buscar el comando para cada librería. Los que vamos a ocupar son los siguientes:
             </p>
             <ul class="custom-list">
@@ -411,11 +425,13 @@
             <br>
             <h4>Instalación de PyTorch</h4>
             <div class="alert alert-info" role="alert">
-              Recuerda que para poder instalar este paquete es necesario que tu computadora tenga una <strong>arquitectura de 64-bits</strong> y que hayas <strong>instalado la versión de 64-bits de Python</strong>,
-              de lo contrario no podrás llevar a cabo la instalación. Si ese es tu caso, sería muy importante que pudieras contactarnos y comentarnos tu situación. Además de eso, puedes visitar la
-              secciónn de <a class="text-info" href="/Additional">recursos adicionales</a> donde encontrarás una excelente alternativa y no perderte la última sección del curso.
+              <p class="text">
+                  Recuerda que para poder instalar este paquete es necesario que tu computadora tenga una <strong>arquitectura de 64-bits</strong> y que hayas <strong>instalado la versión de 64-bits de Python</strong>,
+                de lo contrario no podrás llevar a cabo la instalación. Si ese es tu caso, sería muy importante que pudieras contactarnos y comentarnos tu situación. Además de eso, puedes visitar la
+                secciónn de <a class="text-info" href="/Additional">recursos adicionales</a> donde encontrarás una excelente alternativa y no perderte la última sección del curso.
+              </p>
             </div>
-            <p>
+            <p class="text">
               Para buscar el comando de instalación de PyTorch es necesario entrar al sitio <a class="text-info" href="https://pytorch.org/">https://pytorch.org/</a>. Una vez en el sitio buscar la sección <em>Quick Start Locally</em>
               donde se despliegan varias opciones. Deberás elegir las que correspondan con tu sistema, recordando que vas a utilizar <strong>Pip</strong> como paquete instalador. Si tu computadora tiene una tarjeta
               gráfica (GPU) de la marca NVIDIA podrás seleccionar la versión de <em>CUDA</em> que tengas instalada. Si no cuentas con GPU NVIDIA selecciona la opción <strong>None</strong>.
@@ -425,7 +441,7 @@
               <strong>¡Muy importante!</strong> Recuerda que estás instalando para Python3, por lo que antes de ejecutar el comando, modifica <code class="mc">pip</code> por
               <code class="mc">pip3</code>.
             </div>
-            <p>
+            <p class="text">
               Una vez finalizada la instalación puedes probar que se haya llevado a cabo correctamente ejecutando lo siguiente en python:
             </p>
             <div class="w3-panel w3-card w3-light-grey pythonHigh notranslate">
@@ -443,8 +459,8 @@
                 [0.1449, 0.1132, 0.1375],
                 [0.4675, 0.3947, 0.1426]]) </pre>
             </div>
-            <p>
-              Si instalaste para CUDA puedes verificar la instalación ejecutando:
+            <p class="text">
+              Si se realizó la instalación para CUDA, puedes verificar la instalación ejecutando:
             </p>
             <div class="w3-panel w3-card w3-light-grey pythonHigh notranslate">
               <p><br>
@@ -452,14 +468,14 @@
                 >>> torch.cuda.is_available()
               </p>
             </div>
-            <p>
+            <p class="text">
               Que regresará un valor <strong>True</strong> si la instalación fue correcta, o <strong>False</strong> en caso contrario.
             </p>
 
             <hr>
             <h2>Últimos detalles</h2>
-            <p>
-              Si completaste todos los pasos anteriores, ¡tienes listo todo lo que vamos a ocupar en el curso! Te recomendamos visitar
+            <p class="text">
+              Si completaste todos los pasos anteriores, ¡tienes listo todo lo que se necesitará en el curso! Te recomendamos visitar
               la sección de <a class="text-info" href="/Additional">recursos adicionales</a> donde encontrarás un poco más de información
               que pudiera ser de utilidad.
             </p>

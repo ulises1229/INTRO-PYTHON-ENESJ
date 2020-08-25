@@ -81,6 +81,7 @@ main, footer {
 main h1 {
   padding: 60px;
   font-size: 3em;
+  text-align: center;
 }
 
 main {
@@ -187,8 +188,14 @@ footer {
     background-size: cover;
     background-position: center;
     left: 0;
+    line-height:30px;
 }
 
 .blue {
   color: #4590B8;
+}
+
+.text{
+  text-align:justify; 
+  line-height:30px;
 }
