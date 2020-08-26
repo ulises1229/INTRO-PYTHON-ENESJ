@@ -36,10 +36,10 @@
                   <a href="ProyectoIntro.html">Proyecto final</a>
                   <a href="#">Mini Proyectos</a>
               </div>
-              <button class="dropdown-btn active"> Día 2 - Almacenamiento de Datos
+              <button class="dropdown-btn"> Día 2 - Almacenamiento de Datos
                   <i class="fa fa-caret-down"></i>
               </button>
-              <div class="dropdown-container">
+              <div class="dropdown-container" style="display: block;">
                   <a class="selected" href="AlmacenamientoDatos.html">Ejercicios en clase</a>
                   <a href="ProyectoAlmacenamientoDatos.html">Proyecto final</a>
                   <a href="#">Mini Proyectos</a>
@@ -92,7 +92,6 @@
               dropdown[i].addEventListener("click", function() {
               this.classList.toggle("active");
               var dropdownContent = this.nextElementSibling;
-              console.log(dropdownContent.innerHTML);
               if (dropdownContent.style.display === "block") {
                 dropdownContent.style.display = "none";
               } else {

@@ -55,10 +55,10 @@
                   <a href="ProyectoManipulacionDatos.html">Proyecto final</a>
                   <a href="#">Mini Proyectos</a>
               </div>
-              <button class="dropdown-btn active"> Día 4 - Matemáticas Simbólicas y Visualización de Datos
+              <button class="dropdown-btn"> Día 4 - Matemáticas Simbólicas y Visualización de Datos
                   <i class="fa fa-caret-down"></i>
               </button>
-              <div class="dropdown-container active">
+              <div class="dropdown-container" style="display: block;">
                   <a href="VisualizacionDatos.html">Ejercicios en clase</a>
                   <a class="selected" href="ProyectoVisualizacionDatos.html">Proyecto final</a>
                   <a href="#">Mini Proyectos</a>
@@ -95,7 +95,6 @@
               dropdown[i].addEventListener("click", function() {
               this.classList.toggle("active");
               var dropdownContent = this.nextElementSibling;
-              console.log(dropdownContent.innerHTML);
               if (dropdownContent.style.display === "block") {
                 dropdownContent.style.display = "none";
               } else {

@@ -28,10 +28,10 @@
           <a href="About.html">Acerca de este curso</a>
           <hr>
           <h3>Contenido</h3>
-              <button class="dropdown-btn active"> Día 1 - Introducción a Python
+              <button class="dropdown-btn"> Día 1 - Introducción a Python
                   <i class="fa fa-caret-down"></i>
               </button>
-              <div class="dropdown-container">
+              <div class="dropdown-container" style="display: block;">
                   <a class="selected" href="IntroPython.html">Ejercicios en clase</a>
                   <a href="ProyectoIntro.html">Proyecto final</a>
                   <a href="#">Mini Proyectos</a>
@@ -92,7 +92,6 @@
               dropdown[i].addEventListener("click", function() {
               this.classList.toggle("active");
               var dropdownContent = this.nextElementSibling;
-              console.log(dropdownContent.innerHTML);
               if (dropdownContent.style.display === "block") {
                 dropdownContent.style.display = "none";
               } else {
