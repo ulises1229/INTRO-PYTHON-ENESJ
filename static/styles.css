@@ -122,6 +122,11 @@ main {
     text-align: center;
     float: none;
   }
+  main, footer {
+    margin-left: 0%;
+    padding: 1px;
+    width: 100%;
+  }
 }
 
 .menu-image {
@@ -197,7 +202,7 @@ footer {
 }
 
 .text{
-  text-align:justify; 
+  text-align:justify;
   line-height:32px;
 }
 

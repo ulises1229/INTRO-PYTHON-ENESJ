@@ -275,7 +275,7 @@
           </p>
           <h4><code class="mc">InteligenciaSanitaria.py</code></h4>
           <p>
-              este código será el principal para el proyecto. En él haremos toda la implementación de una DNN. Podemos dividir dicha implementación en cuatro grandes secciones:
+              Este código será el principal para el proyecto. En él haremos toda la implementación de una DNN. Podemos dividir dicha implementación en cuatro grandes secciones:
           </p>
           <h3>Preparación de datos</h3>
           <p>
@@ -321,13 +321,13 @@ class Red(nn.Module):
               ya hemos definido la función <code class="mc">self.sigmoid</code> que va a tener el comportamiento de <code class="mc">nn.Sigmoid()</code> de PyTorch, pero dentro de nuestro modelo. Esta función es la
               <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_sigmoide" class="text-info" target="_blank">función de activación sigmoide</a> que la ocupamos para obtener valores entre 0 y 1. En esta función <code class="mc">__init__</code> se
               definen tanto funciones de activación como las capas que se van a ocupar en el modelo. Por ejemplo si quisiéramos cear una capa que entren 5 datos y salgan 3 crearíamos la siguiente función <code class="mc">self.capa1 = nn.Linear(5, 3)</code>.
-              Presta especial atención que la palabra <code class="mc">self</code> se repite en todas las definiciones, esto es porque cuando trabajamos con clases y algo que se llama <a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos" target="_blank" class="href">programación orientada a objetos</a>
+              Presta especial atención que la palabra <code class="mc">self</code> se repite en todas las definiciones, esto es porque cuando trabajamos con clases y algo que se llama <a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos" target="_blank" class="text-info">programación orientada a objetos</a>
               esto hace refencia a que es un elemento de esa clase, como si le perteneciera. Igualmenente cuando quieras utilizar alguna de esas funciones deberás de ocupar <code class="mc">self</code> para indicar que intentas utilizar lo que está contenido en esa clase.
           </p>
           <p>
               La siguiente función es <code class="mc">forward</code> que es aquella que indicará realmente la arquitectura, la forma de procesar los datos de la red. La declaración de la función luce de la forma <code class="mc">def forwad(self, x)</code>, donde podemos prestar
               atención a lor argumentos que toma esta función. El primero es simplemente por convención y requerimiento de python que se agregue <code class="mc">self</code>, por lo que el importante será <code class="mc">x</code>. Este argumento <code class="mc">x</code> es el que
-              contiene los datos de entrada de la red. Esto quiere decir que, cuando ingrean los datos a nuestro modelo, entrar en esa variable <code class="mc">x</code>, por tanto será aquella a la que buscamos pasarla por nuestra red. En pocas palabras, <code class="mc">x</code>
+              contiene los datos de entrada de la red. Esto quiere decir que, cuando ingresan los datos a nuestro modelo, entran en esa variable <code class="mc">x</code>, por tanto será aquella a la que buscamos pasarla por nuestra red. En pocas palabras, <code class="mc">x</code>
               son los datos, lo que le hagamos en la función <code class="mc">forward</code> será la arquitectura de nuestra red.
           </p>
           <p>
@@ -345,15 +345,15 @@ class Red(nn.Module):
           </p>
           <p>
               Luego de completar la definición de la clase <code class="mc">Red</code>, creamos una variable de ese tipo, que hemos llamado <code class="mc">red</code> por simplicidad. Pero no te confundas, <code class="mc">Red</code> con mayúscula es la clase, como si fuera una plantilla de la cual puedes copiar tantas veces quieras
-              la arquitectura que craste. Mientras que <code class="mc">red</code> con minúscula es una copia de la plantilla; pero es esa la que vamos a entrenar.
+              la arquitectura que creaste. Mientras que <code class="mc">red</code> con minúscula es una copia de la plantilla; pero es esa la que vamos a entrenar.
           </p>
           <p>
-              Hemos tomado la función más usual y sencilla para modelos de DNN conocida como <a href="https://es.wikipedia.org/wiki/Error_cuadr%C3%A1tico_medio" target="_blank" class="text-info">MSE (error cuadrático medio en español)</a>, la cual mide la distancia euclidiana entre los puntos objetivo y las predicciones de la red.
+              Hemos tomado la función de pérdida más usual y sencilla para modelos de DNN conocida como <a href="https://es.wikipedia.org/wiki/Error_cuadr%C3%A1tico_medio" target="_blank" class="text-info">MSE (error cuadrático medio en español)</a>, la cual mide la distancia euclidiana entre los puntos objetivo y las predicciones de la red.
           </p>
           <p>
               También hemos definido para ti el optimizador que vamos a ocupar. Igualmente el <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent" target="_blank" class="text-info">SGD</a> es el más básico y más conocido de todos, por ello lo hemos ocupado, pero si te sientes con seguridad puedes intentar cambiarlo,
-              <a href="https://pytorch.org/docs/stable/optim.html" target="_blank" class="text-info">aquí</a> hay una lista con todos los optimizadores con los que cuenta PyTorch. Notarás que este optimizador toma dos argumentos <code class="mc">red.parameters()</code> que son el conjutno de parámetros (lo que se va a ajustar) del modelo,
-              y también con un <code class="mc">lr</code> que el el conocido como <a href="https://en.wikipedia.org/wiki/Learning_rate" target="_blank" class="text-info">learning rate</a>, con el que también puedes sentirte libre de jugar con sus valores, de hecho esta es una de las prácticas más comúnes en Deep Learning, ya que es una forma de encontrar
+              <a href="https://pytorch.org/docs/stable/optim.html" target="_blank" class="text-info">aquí</a> hay una lista con todos los optimizadores con los que cuenta PyTorch. Notarás que este optimizador toma dos argumentos <code class="mc">red.parameters()</code> que son el conjunto de parámetros (lo que se va a ajustar) del modelo,
+              y también con un <code class="mc">lr</code> que es el conocido como <a href="https://en.wikipedia.org/wiki/Learning_rate" target="_blank" class="text-info">learning rate</a>, con el que también puedes sentirte libre de jugar con sus valores, de hecho esta es una de las prácticas más comúnes en Deep Learning, ya que es una forma de encontrar
               el óptimo para tu modelo.
           </p>
           <h3>Entrenamiento del modelo</h3>
@@ -404,10 +404,10 @@ class Red(nn.Module):
 
           <hr>
           <h2>Walkthrough</h2><br>
-          <p>En desarrollo.</p>
-          <!-- <div class="container">
-            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/1ETiwXo0lg4?start=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div> -->
+          <p>Este proyecto tiene dos vídeos de apoyo, asegúrate de ver ambos. El segundo vídeo se cargará automáticamente al acabar el primero, o puedes utilizar los botones de siguiente y anterior para pasar de uno a otro.</p>
+          <div class="container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/videoseries?list=PL9mZ1GE1ZXdlEL-8CyADiZYrdod8Kwp-S" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
 
           <hr>
           <h2>Resultados esperados</h2>
