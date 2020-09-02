@@ -1,4 +1,4 @@
-# CURSO-TALLER: Introducción al análisis y visualización de datos en Python
+ # CURSO-TALLER: Introducción al análisis y visualización de datos en Python
 
 ![alt text](https://github.com/ulises1229/INTRO-R-ENESJ/blob/master/figs/header.png)
 ![alt text](figs/python.png)
@@ -31,5 +31,5 @@
 | Día 4      | Matemáticas simbólicas y visualización de datos| <ul>  <li> Manipulaciones algebraicas</li> <li> Cálculo (Expansión de series, diferenciación, integración) </li> <li> Resolución de ecuaciones algebraicas</li> <li> Cómo elegir un gráfico adecuado? </li> <li> Matplotlib (o	Gráficos simples y personalización de gráficos)</li></ul>| <ol><li></li> <li></li></ol>  | |
 | Día 5      | Python e inteligencia artificial | <ul> <li> Introducción y definiciones</li> <li> Redes neuronales</li> <li> Deep Learning con PyTorch</li></ul> |  <ol><li></li> <li></li></ol>   | |
 
-##### Última modificación 01 de septiembre de 2020
+##### Última modificación 02 de septiembre de 2020
 
