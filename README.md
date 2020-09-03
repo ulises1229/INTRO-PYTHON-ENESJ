@@ -31,8 +31,8 @@
 | Día 4      | Matemáticas simbólicas y visualización de datos| <ul>  <li> Manipulaciones algebraicas</li> <li> Cálculo (Expansión de series, diferenciación, integración) </li> <li> Resolución de ecuaciones algebraicas</li> <li> Cómo elegir un gráfico adecuado? </li> <li> Matplotlib (o	Gráficos simples y personalización de gráficos)</li></ul>| <ol><li>[Presentación](pdf/dia4.pdf)</li> <li>[Código(Colab)](code/día4.ipynb)</li> <li>[mpg.csv](data/mpg.csv)</li> <li>[temp.csv](data/temp.csv)</li> <li>[iris.csv](data/iris.csv)</li> <li>[co2.csv](data/co2.csv)</li></ol>| |
 | Día 5      | Python e inteligencia artificial | <ul> <li> Introducción y definiciones</li> <li> Redes neuronales</li> <li> Deep Learning con PyTorch</li></ul> |  <ol><li></li> <li></li></ol>   | |
 
-## Lista acceso G. Colab
-[Lista](https://docs.google.com/spreadsheets/d/1YYXG_MLuiGiBnLZ90A7BON6Y_sNqmehYo5pHz700QJM/edit?usp=sharing)
+## Lista Acceso Google Colab
+[Lista Google Colab](https://docs.google.com/spreadsheets/d/1YYXG_MLuiGiBnLZ90A7BON6Y_sNqmehYo5pHz700QJM/edit?usp=sharing)
 
 ##### Última modificación 03 de septiembre de 2020
 
