@@ -116,6 +116,13 @@
           <h2>Código Inicial</h2>
           <p>Descarga los archivos necesarios para comenzar este proyecto.</p>
           <a href="static/Proyecto5.zip" class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; " download>Descargar archivos</a>
+          <div class="alert alert-info" role="alert">
+            <p class="text">
+              En caso de que seas de las personas que no hayan podido instalar PyTorch en su computadora, vamos a ocupar Kaggle como una alternativa. Podrás encontrar más información
+              sobre su uso <a href="#kaggle" class="text-info">al final de esta página</a>. Por lo pronto no descargues los datos ni el código, ya que estos los hemos subido a Kaggle
+              para ti. <br> Por ahora sigue leyendo el proyecto con normalidad hasta el final.
+            </p>
+          </div>
 
           <hr>
           <h2>Inspiración</h2>
@@ -418,8 +425,8 @@ class Red(nn.Module):
               Bien, recuerda que estos fueron los resultados tomando únicamente una porción de todos los datos que hay sobre la actual pandemia. Si quieres poner a prueba la capacidad de tu modelo de mejor manera, puedes descargar todos los datos disponibles aquí
           </p>
           <a href="static/Proyecto5Data.zip" class="btn btn-outline-primary" style="margin-left: auto; margin-right: auto; " download>Descargar todos los datos (150MB)</a>
-          <p> <br>
-              O si lo prefieres puedes encontrar esos mismo datos en el <strong>COMPLETAR AQUÍ</strong><a target="_blank" href="" class="text-info">siguiente dataset de Kaggle</a> que contiene los mismos datos. Si no ocupaste Kaggle anteriormente, tal vez
+          <p id="kaggle"> <br>
+              O si lo prefieres puedes encontrar esos mismo datos en el <a target="_blank" href="https://www.kaggle.com/walt22r/proyectointeligenciasanitaria" class="text-info">siguiente notebook de Kaggle</a> que contiene los mismos datos. Si no ocupaste Kaggle anteriormente, tal vez
               sea una buena opción probarlo. Puedes encontrar más información al respecto en la sección de <a href="/Additional" class="text-info">recursos adicionales</a> donde viene cómo crear un notebook en la nube y cómo agregar datos
               en él.
           </p>
