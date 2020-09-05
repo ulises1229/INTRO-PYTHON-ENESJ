@@ -34,5 +34,5 @@
 ## Lista Acceso Google Colab
 [Lista Google Colab](https://docs.google.com/spreadsheets/d/1YYXG_MLuiGiBnLZ90A7BON6Y_sNqmehYo5pHz700QJM/edit?usp=sharing)
 
-##### Última modificación 03 de septiembre de 2020
+##### Última modificación 04 de septiembre de 2020
 
