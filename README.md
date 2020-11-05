@@ -31,7 +31,4 @@
 | Día 4      | Matemáticas simbólicas y visualización de datos| <ul>  <li> Manipulaciones algebraicas</li> <li> Cálculo (Expansión de series, diferenciación, integración) </li> <li> Resolución de ecuaciones algebraicas</li> <li> Cómo elegir un gráfico adecuado? </li> <li> Matplotlib (o	Gráficos simples y personalización de gráficos)</li></ul>| <ol><li>[Presentación](pdf/dia4.pdf)</li> <li>[Código(Colab)](code/día4.ipynb)</li> <li>[mpg.csv](data/mpg.csv)</li> <li>[temp.csv](data/temp.csv)</li> <li>[iris.csv](data/iris.csv)</li> <li>[co2.csv](data/co2.csv)</li> <li>[Proyecto Final](code/Solved/Day4)</li> </ol>| [Video Día 4](https://youtu.be/tfWXAWlpSSM)|
 | Día 5      | Python e inteligencia artificial | <ul> <li> Introducción y definiciones</li> <li> Redes neuronales</li> <li> Deep Learning con PyTorch</li></ul> |  <ol><li>[Presentación](pdf/dia5.pdf)</li> <li>[Código(Colab)](https://colab.research.google.com/drive/1Oua75Lkw-frEwPcweGYXUedw-4t5aozy?usp=sharing)</li><li>[Código(GitHub)](code/día5.ipynb)</li><li>[Código(Kaggle)](https://www.kaggle.com/walt22r/proyectointeligenciasanitaria?select=COVID19MEXICO.csv)</li> <li>[Proyecto Final](code/Solved/Day5)</li> </ol>   |[Video Día 5](https://youtu.be/87ZakDX4Ajs) |
 
-## Lista Acceso Google Colab
-[Lista Google Colab](https://docs.google.com/spreadsheets/d/1YYXG_MLuiGiBnLZ90A7BON6Y_sNqmehYo5pHz700QJM/edit?usp=sharing)
-
 ##### Última modificación 20 de septiembre de 2020
