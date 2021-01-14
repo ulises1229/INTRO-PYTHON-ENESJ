@@ -7,7 +7,7 @@
 #### Fechas: 31 de agosto - 04 de septiembre de 2020
 #### Horario: 09:00 a 13:00 horas.
 ## Página del curso
-[Página con código, materiales y explicación](http://132.247.186.49/courses/python/)
+[www.hpclab.unam.mx/course/python](http://www.hpclab.unam.mx/course/python)
 
 ## Prerequisitos
 <ol><li>Python versión 3.x instalado</li><li>Entorno de desarrollo integrado (cualquiera de los siguientes)<ul><li>Jupyter - https://jupyter.org/</li><li>Pycharm -https://www.jetbrains.com/es-es/pycharm/</li><li>Spyder- https://www.spyder-ide.org/</li></ul></li> <li>Librerías <ul><li>Numpy</li>Pandas<li>Matplotlib</li><li>Scipy</li><li>PyTorch (Opcional)</li></ul></li></ol>
